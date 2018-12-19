@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.5s;
+}
+body {
+  background-color: transparent;
+  height: 100%;
+}
+h2 {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #424242;
+  letter-spacing: 1px;
+}
+/* -------------------------------------------------- */
+
+/*Библиотека Water???
+Наладить анимацию слова, подключить шрифты, logo.
+Разобраться с кнопками
+ */
+/* First section and header.*/
+header {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 12px 0 #2d2d2d;
+  position: absolute;
+  top:0;
+
+}
+nav {
+  width: 100%;
+}
+.logo>a, nav>ul>li>a {
+  color:#fff;
+}
+nav>ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav>ul>li>a {
+  text-transform: uppercase;
+
+}
+nav>ul>li:not(:first-child){
+  margin-left: 20px;
+}
+section.first-info {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/wave.png'),url('../img/bg-top.jpg');
+  background-size:100%, 100%;
+  background-repeat: no-repeat;
+  background-position: 100% 101%, top;
+}
+.first-text-center {
+  width: 100%;
+  /* height: 240px; */
+  text-align: center;
+  position: relative;
+  top:50%;
+  left:0%;
+
+}
+.first-text-center p {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1.8em;
+  text-align: center;
+  color: #fff;
+}
+
+.first-text-center span {
+  display: inline-block;
+  font-size: 80px;
+  font-weight: 600;
+  color: #f00;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+}
+#change>span {
+  display: none;
+}
+#change>span:first-child{
+  display: block;
+  animation: turn 4s infinite ease-out;
+}
+
+.btn {
+  /* display: block; */
+  width: 160px;
+  /* height: 50px; */
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #c61673;
+  background-color: #c61673;
+  text-align: center;
+  line-height: 50px;
+  margin-top:20px;
+  margin-left: auto;
+
+}
+.round-btn {
+  background-color: #c61673;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  color: #fff;
+  line-height: 70px;
+
+}
+/* --------------------------------------- */
+/* Анимация слайдера, точки, анимация фото, кнопки */
+/* Section two: slider and about */
+.about-info {
+  background-image: url('../img/bg-about.jpg');
+  background-position: 100% 100%;
+  background-repeat:no-repeat;
+  padding-top: 100px;
+}
+.slider {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+.skill {
+  width: 380px;
+  padding: 0 15px;
+  box-shadow: 0 0 15px 0 #e4e4e4;
+  background-color: #fff;
+  display: block;
+}
+.skill>img {
+  width: 100%;
+}
+.my-skills {
+  padding: 50px;
+  margin-top: -5px;
+  width: 100%;
+}
+.my-skills>i {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #c61673;
+}
+.my-skills>h3 {
+  color: #424242;
+  font-style: 22px;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px 0;
+
+}
+.my-skills>p {
+  text-align: left;
+  line-height: 1.8em;
+  font-size:15px;
+}
+.about-me {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  justify-content: center;
+}
+
+.about-me img {
+  height: 100%;
+  border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+  position: relative;
+}
+
+.image-frame a {
+  position: relative;
+  bottom:calc(50% + 35px);
+  left:calc(50% - 35px);
+}
+.about-text {
+  padding: 40px;
+  font-size: 15px;
+  line-height: 1.8em;
+}
+.about-text span {
+  color: #c61673;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.social-contact-me>ul {
+  display: inline-flex;
+  width: 300px;
+  justify-content: space-between;
+}
+.social-contact-me>ul>li:not(:first-child) {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.social-contact-me>ul>li:first-child {
+  margin-right: 30px;
+
+}
+
+.social-contact-me>ul>li>a {
+  font-size: 14px;
+  color: #000;
+}
+/* ------------------------------------------ */
+/* Запихнуть розовый фон???, анимация иконок, счетчики? */
+/* Section three: my Numbers */
+.my-numbers {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('../img/counter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.numbers-text {
+  padding: 50px;
+  z-index: 2;
+}
+.numbers-text h2, .numbers-text p {
+  color: #fff;
+}
+.my-digits {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  z-index: 2;
+}
+.stat-box {
+  width: 50%;
+  text-align: center;
+  vertical-align: center;
+
+}
+.stat-box i {
+  font-size: 25px;
+  text-align: center;
+}
+.stat-box h2 {
+  margin-top: 40px;
+  color: #fff;
+}
+.stat-box span {
+  color:#fff;
+  margin-top: 10px;
+}
+/* .my-numbers::after {
+  content: '';
+  transform: skew(-10deg);
+  border: 1px solid yellow;
+  background-color:#c61673;
+  position: absolute;
+  height: 2000px;
+  width: 100%;
+  left: 0;
+  top: -1000px;
+  z-index: 1;
+} */
+.my-numbers::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.82);
+    z-index: 1;
+}
+
+/* ------------------------------------------ */
+/* Section four: My Portfolio and pictures */
+.my-portfolio {
+  padding: 80px;
+}
+.folio-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.folio-title p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8em;
+}
+.sort-images {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.sort-images li {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  color:#666;
+  padding: 5px 20px;
+}
+.image-wrapper {
+  width: 100%;
+  height: 150vh;
+}
+.image-wrapper img {
+  height: 50vh;
+  width: 30vw;
+  position: relative;
+}
+.item-text {
+  width: 180px;
+  height: 80px;
+  padding:10px;
+  position: relative;
+  display: none;
+}
+.item-text>ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+.item-text li i {
+  width: 40px;
+  height: 40px;
+  font-size: 17px;
+  background-color: #c61673;
+  color:#fff;
+  border: 1px solid #c61673;
+  line-height: 40px;
+  text-align: center;
+
+}
+.item-text li:first-child {
+  align-self: flex-start;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+.item-text ul:before{
+  content: '';
+  height: calc(100% + 70px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 0%;
+  top: -30px;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  z-index: -2;
+}
+.image-wrapper>img:hover ~.item-text {
+  display: block;
+  transition: all 0.3s ease;
+}
+/* ------------------------------------------- */
+/* Section five: My Experience */
+
+.my-exp {
+  background-image:url('../img/exp-bg.jpg');
+
+  height: 150vh;
+  width: 100%;
+  display: flex;
+}
+.exp-wrapper {
+  width: 50%;
+  height: 100%;
+}
+.my-exp .photo {
+  width: 50%;
+  background-image: url('../img/exp-front.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.exp-wrapper.text{
+  width: 50%;
+  padding: 100px 120px 80px;
+}
+.exp-wrapper>h2,.exp-wrapper p {
+  text-align: left;
+  color:#fff;
+}
+.exp-wrapper>p {
+  line-height: 1.8em;
+  margin: 10px 0 50px;
+  font-size: 15px;
+}
+.exp-wrapper>ul>li h3{
+  color:#c61673;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+.exp-wrapper>ul>li h4 {
+  color:#cbcbcb;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.exp-wrapper>ul>li .round-btn {
+  border-radius: 0;
+  width: 50%;
+  transform: scale(0.8);
+  font-size: 30px;
+
+}
+.exp-wrapper>ul>li {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.exp-wrapper>ul>li .wrapper {
+  padding: 0 10px 10px 10px;
+}
+
+/* ------------------------------------------- */
+/* Section six: My Service */
+
+.my-service {
+  background-color: #f2f2f2;
+}
+
+
+@keyframes turn {
+  from {display: none; opacity: 0;}
+  25% { display: block; opacity: 0.8}
+  50% { display: block; opacity: 1}
+  75% { display: block; opacity: 0.5}
+  to {display: block; opacity: 1}
+}
