@@ -232,32 +232,43 @@ section.first-info {
 .my-numbers {
   width: 100%;
   height: 100vh;
+  padding: 20px 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-image: url('../img/counter.jpg');
+  background:rgba(0, 0, 0, 0.82) url('../img/counter.jpg');
+  background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
 }
 .numbers-text {
   padding: 50px;
-  z-index: 2;
+  width: 455px;
+  height: 500px;
+  background-color: #c61673;
+  transform-origin: center;
+  transform: scale(-10deg);
 }
 .numbers-text h2, .numbers-text p {
   color: #fff;
 }
 .my-digits {
   width: 50%;
+  position: relative;
+  right: 0;
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
-  z-index: 2;
+  justify-content: flex-start;
+  align-content: space-around;
+
 }
 .stat-box {
   width: 50%;
-  text-align: center;
+  text-align: left;
   vertical-align: center;
+  padding: 10px;
 
 }
 .stat-box i {
@@ -265,7 +276,7 @@ section.first-info {
   text-align: center;
 }
 .stat-box h2 {
-  margin-top: 40px;
+  margin-top: 20px;
   color: #fff;
 }
 .stat-box span {
@@ -284,16 +295,7 @@ section.first-info {
   top: -1000px;
   z-index: 1;
 } */
-.my-numbers::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.82);
-    z-index: 1;
-}
+
 
 /* ------------------------------------------ */
 /* Section four: My Portfolio and pictures */
@@ -368,17 +370,7 @@ section.first-info {
   font-weight: 500;
   font-size: 22px;
 }
-.item-text ul:before{
-  content: '';
-  height: calc(100% + 70px);
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  left: 0%;
-  top: -30px;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  z-index: -2;
-}
+
 .image-wrapper>img:hover ~.item-text {
   display: block;
   transition: all 0.3s ease;
@@ -387,8 +379,12 @@ section.first-info {
 /* Section five: My Experience */
 
 .my-exp {
-  background-image:url('../img/exp-bg.jpg');
-
+  background:rgba(0, 0, 0, 0.82) url('../img/exp-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   height: 150vh;
   width: 100%;
   display: flex;
@@ -457,6 +453,55 @@ section.first-info {
 
 .my-service {
   background-color: #f2f2f2;
+  padding: 100px 0 70px 0;
+}
+.service-header {
+  width: 100%;
+  padding: 0 70px 70px;
+  text-align: center;
+}
+.service-text {
+  display: flex;
+  justify-content: space-around;
+}
+.service-header h2 {
+  margin-bottom: 15px;
+}
+.service-header p {
+  line-height: 1.8em;
+  color: #666;
+  font-size: 15px;
+}
+.service-item {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  width: 30%;
+  border-radius: 20px 0 20px 0;
+  background-color: #fff;
+  position: relative;
+  padding: 15px 20px 30px 15px;
+}
+.service-item span {
+  display: block;
+  width: 100px;
+  height: 140px;
+  font-size: 90px;
+  color: #fff;
+  text-align: center;
+  line-height: 130px;
+  background: linear-gradient(135deg,#c61673 25%,#b01466 26%,#b01466 40%,#c61673 41%,#b01466 47%,#b01466 48%, #b01466 60%, #c61673 61%);
+  border-bottom-right-radius: -100px;
+  position: relative;
+  top: -30px;
+  left:0;
+  align-self: flex-start;
+}
+.service-item:nth-child(2) {
+  position: relative;
+  top: 0;
+  right: 0;
+
 }
 
 
