@@ -493,16 +493,99 @@ section.first-info {
   background: linear-gradient(135deg,#c61673 25%,#b01466 26%,#b01466 40%,#c61673 41%,#b01466 47%,#b01466 48%, #b01466 60%, #c61673 61%);
   border-bottom-right-radius: -100px;
   position: relative;
-  top: -30px;
+  top: -9%;
   left:0;
   align-self: flex-start;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  border-top-right-radius: 2px;
 }
 .service-item:nth-child(2) {
   position: relative;
   top: 0;
   right: 0;
-
 }
+.service-item:before {
+  content:'\25e3';
+  color: #c61673;
+  position: absolute;
+  top:-5%;
+  left: 113px;
+  width: 20px;
+  transform: scale(1.1);
+}
+/* ------------------------------------------- */
+/* Section seven: features and list of features, btn Hire */
+.features {
+  width: 100%;
+  height: 100vh;
+  background:transparent url('../img/features-image.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.features-text {
+  width: 70%;
+  color: #fff;
+  padding: 100px 0 80px 80px;
+}
+.features-text h2 {
+  color: white;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.features-text p {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8em;
+  text-align: justify;
+}
+.features-text a.btn {
+  display: block;
+  margin-top: 30px;
+  margin-left: 0;
+}
+.features-items {
+  width: 41%;
+  padding: 0 80px 40px 40px;
+}
+.features-items ul {
+  display: flex;
+  flex-flow: column wrap;
+}
+.features-items li {
+  padding: 7px 40px;
+  border-bottom: 1px solid #383838;
+  background-color: #c61673;
+  color:#fff;
+  position: relative;
+}
+.features-items li::before {
+  content:'-';
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  width: 30px;
+  line-height: 30px;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  left: 0;
+  top:0;
+}
+.features-items li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+
 
 
 @keyframes turn {
