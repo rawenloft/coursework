@@ -865,3 +865,44 @@ button {
 }
 /* ------------------------------------ */
 /* Footer section */
+footer {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/footer-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.me {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.me h2 {
+  font-size: 42px;
+  color: #c61673;
+
+}
+.me ul {
+  display: flex;
+  flex-flow: row wrap;
+  color: #fff;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  vertical-align: middle;
+  height: 100px;
+}
+.copyright span {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #292929;
+  width: 100%;
+}
