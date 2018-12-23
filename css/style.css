@@ -109,7 +109,7 @@ section.first-info {
 }
 .header-wrapper {
   width: 100%;
-  
+
   margin: 0 auto;
 }
 .headtext-center {
@@ -183,7 +183,7 @@ section.first-info {
 
 
 .btn {
-  /* display: block; */
+  display: block;
   width: 100%;
   max-width: 160px;
   height: 50px;
@@ -198,13 +198,59 @@ section.first-info {
    position: relative;
    transition: all 1s;
 }
-
+.btn span.btn-text, div.btn-text {
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-family: 'Poppins',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
+}
+.btn:before {
+  content: '';
+  position: absolute;
+  bottom:0;
+  left: 0;
+  height: 0px;
+  width: 0px;
+  z-index: 0;
+}
+.btn:after {
+  content: '';
+  position: absolute;
+  top:0;
+  right: 0;
+  border-right: 1px solid #fff;
+  height: 0px;
+  width: 0px;
+}
 .btn:hover {
   color:#fff;
   border-color: #000;
   background-color: #000;
 }
+.btn:hover:before, .btn:hover:after {
+  transition: .5s;
+}
+.btn:hover:before {
+  border: 48px solid transparent;
+  border-top: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-left: 160px solid #000;
+  width: 100%;
 
+}
+.btn:hover:after {
+  border: 48px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 160px solid #000;
+  width: 100%;
+
+}
  .headtext-center .btn:after{
   content:'';
   height:100px 300px;
