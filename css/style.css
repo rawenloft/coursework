@@ -35,9 +35,13 @@ h2 {
   font-family: 'Poppins',sans-serif;
   font-weight: 600;
   font-size: 42px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #424242;
   letter-spacing: 1px;
+}
+.main-wrapper {
+  width: 100%;
+  margin: 0 auto;
 }
 /* -------------------------------------------------- */
 
@@ -277,10 +281,13 @@ section.first-info {
   padding-top: 100px;
 }
 .slider {
+  width: 90%;
+  height: 510px;
+  overflow: hidden;
   display: flex;
-  flex-flow:row wrap;
+  flex-flow:row nowrap;
   justify-content: space-around;
-  align-content: flex-start;
+  align-content: flex-end;
 }
 .skill {
   width: 380px;
@@ -329,21 +336,24 @@ section.first-info {
 }
 
 .about-photo img {
-  height: 100%;
+  height: 50%;
   border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
   box-shadow: 2px 10px 0px 0px rgba(0, 0, 0, 0.16);
 }
 
 .about-photo a {
-  position: relative;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top:20%;
+  left:40%;
+  transform: translate(0%, 0%);
 }
 .about-text {
   padding: 40px;
   font-size: 15px;
   line-height: 1.8em;
+}
+.about-text h3 {
+  margin-bottom: 15px;
 }
 .about-text span {
   color: #c61673;
@@ -352,6 +362,9 @@ section.first-info {
   font-size: 42px;
   margin-bottom: 10px;
   letter-spacing: 1px;
+}
+.social-contact-me {
+  margin-top: 20px;
 }
 .social-contact-me>ul {
   display: inline-flex;
@@ -365,12 +378,23 @@ section.first-info {
 }
 .social-contact-me>ul>li:first-child {
   margin-right: 30px;
-
+  padding-bottom: 20px;
+  position: relative;
+}
+.social-contact-me>ul>li:first-child:before {
+  content: '';
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #000;
 }
 
 .social-contact-me>ul>li>a {
   font-size: 14px;
   color: #000;
+}
+.social-contact-me>ul>li>a:hover {
+  color:#666;
 }
 /* ------------------------------------------ */
 /* Запихнуть розовый фон???, анимация иконок, счетчики? */
@@ -425,6 +449,7 @@ section.first-info {
 .stat-box i {
   font-size: 25px;
   text-align: center;
+  border-radius: 50%;
 }
 .stat-box h2 {
   margin-top: 20px;
@@ -478,25 +503,42 @@ section.first-info {
 }
 .image-wrapper {
   width: 100%;
-  height: 150vh;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2vw;
+  position: relative;
+  justify-content: start;
 }
-.image-wrapper img {
-  height: 50vh;
-  width: 30vw;
+.img-box {
   position: relative;
 }
+.image-wrapper img {
+  width: 100%;
+  display: grid;
+
+}
+
 .item-text {
   width: 180px;
   height: 80px;
   padding:10px;
-  position: relative;
+  position: absolute;
+  top:100px;
+  left: 70px;
+  left: center;
+
   display: none;
+  z-index: 3;
 }
 .item-text>ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #0008;
+  padding: 10px;
 
 }
 .item-text li i {
@@ -522,9 +564,10 @@ section.first-info {
   font-size: 22px;
 }
 
-.image-wrapper>img:hover ~.item-text {
+.image-wrapper img:hover ~.item-text {
   display: block;
   transition: all 0.3s ease;
+
 }
 /* ------------------------------------------- */
 /* Section five: My Experience */
@@ -536,16 +579,16 @@ section.first-info {
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: overlay;
-  height: 150vh;
+  height: 220vh;
   width: 100%;
   display: flex;
 }
 .exp-wrapper {
   width: 50%;
-  height: 100%;
 }
 .my-exp .photo {
-  width: 50%;
+
+  height: 100%;
   background-image: url('../img/exp-front.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -554,17 +597,22 @@ section.first-info {
 .exp-wrapper.text{
   width: 50%;
   padding: 100px 120px 80px;
+
+
+}
+.wrapper {
+  height:10em;
 }
 .exp-wrapper>h2,.exp-wrapper p {
   text-align: left;
   color:#fff;
 }
-.exp-wrapper>p {
+.exp-wrapper p {
   line-height: 1.8em;
   margin: 10px 0 50px;
   font-size: 15px;
 }
-.exp-wrapper>ul>li h3{
+.exp-wrapper ul li h3{
   color:#c61673;
   font-size: 22px;
   font-weight: 500;
@@ -573,7 +621,7 @@ section.first-info {
   font-family: "Poppins", sans-serif;
   margin-bottom: 10px;
 }
-.exp-wrapper>ul>li h4 {
+.exp-wrapper ul li h4 {
   color:#cbcbcb;
   font-size: 16px;
   font-weight: 400;
@@ -583,17 +631,18 @@ section.first-info {
   margin-bottom: 15px;
   line-height: 1;
 }
-.exp-wrapper>ul>li .round-btn {
+.exp-wrapper ul li .round-btn {
   border-radius: 0;
-  width: 50%;
-  transform: scale(0.8);
+  width: 6em;
+  height: 70px;
   font-size: 30px;
 
 }
-.exp-wrapper>ul>li {
+.exp-wrapper ul li {
   display: inline-flex;
   justify-content: space-between;
   padding: 10px 0;
+  position: relative;
 }
 .exp-wrapper>ul>li .wrapper {
   padding: 0 10px 10px 10px;
@@ -626,6 +675,7 @@ section.first-info {
 .service-item {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   text-align: center;
   width: 30%;
   border-radius: 20px 0 20px 0;
@@ -650,19 +700,33 @@ section.first-info {
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   border-top-right-radius: 2px;
 }
-.service-item:nth-child(2) {
-  position: relative;
-  top: 0;
-  right: 0;
+.service-item i {
+  font-size: 60px;
+  color:#e6e4e4;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.service-item:hover.service-item i {
+  animation: rot .5s;
+}
+.service-item h3 {
+    color:#c61673;
+    margin-bottom: 20px;
+}
+.service-item p {
+  font-size: 15px;
+  line-height: 1.8em;
+  color:#666;
+  margin-bottom: 10px;
 }
 .service-item:before {
   content:'\25e3';
   color: #c61673;
   position: absolute;
-  top:-5%;
+  top:-18px;
   left: 113px;
   width: 20px;
-  transform: scale(1.1);
 }
 /* ------------------------------------------- */
 /* Section seven: features and list of features, btn Hire */
@@ -887,8 +951,11 @@ section.first-info {
   text-align: center;
   margin: 0 auto;
   width: 50%;
+  height: 400px;
+
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .work-text p {
   color: #fff;
   text-align: center;
@@ -967,6 +1034,14 @@ section.first-info {
   line-height: 1.8em;
   color: #f3f3f3;
 }
+.help {
+  color: #848484;
+  transition: all .7s;
+  opacity: 0;
+}
+input:required:invalid + .help {
+  opacity: 1;
+}
 .contact-form {
   padding: 70px auto;
   display: flex;
@@ -993,6 +1068,7 @@ section.first-info {
   line-height: 1.4;
   outline: none;
   border-radius: 4px;
+  color:#495057;
 }
 .form-field:focus {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483;
@@ -1073,7 +1149,13 @@ footer {
 .me li i:hover {
   color: #c61673;
 }
-@media only screen and (max-width:768px){
+@media only screen and (min-width:1200px){
+  .main-wrapper {
+    width: 1176px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width:1000px){
   nav ul {
     width: 100px;
     flex-flow: row wrap;
