@@ -5,53 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="shortcut icon" href=" ">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/normalize.css">
-
   <title>Alex Khrenov Portfolio</title>
 </head>
 <body>
   <div class="main-wrapper">
+
     <div class="header-wrapper">
       <header>
-        <div class="logo">
-          <a href="#"><span>Jamiya</span></a>
-        </div>
+        <div class="container">
+            <div class="logo">
+              <a href="#"><span>Jamiya</span></a>
+            </div>
 
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+              <nav class="menu">
+                <input type="checkbox" id="lite">
+                <label for="lite"><i class="fa fa-bars"></i></label>
+                <ul>
+                  <li>
+                    <a href="#house">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#service">Service</a>
+                  </li>
+                  <li>
+                    <a href="#testimonial">Testimonial</a>
+                  </li>
+                  <li>
+
+                    <a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+        </div>
       </header>
-      <section class="first-info" id="home">
-        <div id="home" class="headtext-center">
-          <p>Hello everyone! I'm John Doe.<br />
-          Let's work together to achive the mountain</p>
-          <div class="text-wrapper">
-            <div id="change" class="move">
-              <span>Responsible</span>
-              <span>Conscious</span>
-              <span>Supportive</span>
+
+      <div class="first-info" id="home">
+            <div id="house" class="headtext-center">
+              <p>Hello everyone! I'm John Doe.<br />
+              Let's work together to achive the mountain</p>
+              <div class="text-wrapper">
+                <div id="change" class="move">
+                  <span>Responsible</span>
+                  <span>Conscious</span>
+                  <span>Supportive</span>
+                </div>
+              </div>
+              <a href="#contact" class="btn"><span class="btn-text">Explore more</span></a>
             </div>
           </div>
-          <a href="#contact" class="btn"><span class="btn-text">Explore more</span></a>
-        </div>
     </div>
 
 
-    </section>
 
-
-    <section class="about-info" id="about">
+    <!-- <div class="about-info" id="about">
       <div class="slider">
         <div class="skill">
           <img src="img/slide.jpg" alt="">
@@ -155,10 +173,10 @@
           <a href="#contact" class="btn"><span class="btn-text">Hire me</a>
         </div>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-numbers">
+    <div class="my-numbers">
       <div class="numbers-text ">
         <h2>My Numbers</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eligendi nesciunt voluptate nobis.</p>
@@ -185,10 +203,10 @@
           <span>Coffee Taken</span>
         </div>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-portfolio" id="portfolio">
+    <div class="my-portfolio" id="portfolio">
       <div class="folio-title">
         <h2>My Portfolio</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta consectetur, aperiam aliquam voluptas labore voluptatum ipsum ea tempore. </p>
@@ -334,10 +352,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-exp">
+    <div class="my-exp">
       <div class="photo exp-wrapper">
       </div>
       <div class="text exp-wrapper">
@@ -376,10 +394,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-service">
+    <div class="my-service">
       <div class="service-header" id="service">
         <h2>My Service</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quas earum, sunt eum.</p>
@@ -407,11 +425,11 @@
           <a href="" class="btn"><div class="btn-text">Read More</div></a>
         </div>
       </div>
-    </section>
+    </div>
 
 
 
-    <section class="features">
+    <div class="features">
       <div class="features-text">
         <h2>
           Success is not final; failure is not fatal: It is the courage to continue that counts.
@@ -431,10 +449,10 @@
           <li>Cross browser compatible</li>
         </ul>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-skill">
+    <div class="my-skill">
       <div class="skill-image">
         <span></span>
         <span></span>
@@ -483,10 +501,10 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
 
-    <section class="my-work">
+    <div class="my-work">
       <div class="our-clients" id="testimonial">
         <img src="img/client-1.png" alt="">
         <img src="img/client-2.png" alt="">
@@ -541,10 +559,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
 
-    <section class="hire-form">
+    <div class="hire-form">
       <div class="my-details" id="contact">
         <div class="details-header">
           <h3>John Doe</h3>
@@ -602,7 +620,7 @@
           </form>
         </div>
       </div>
-    </section>
+    </div>
 
 
     <footer>
@@ -621,7 +639,7 @@
       <div class="copyright">
         <span>copyright and design: tamzid hossain</span>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </body>
 </html>

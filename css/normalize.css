@@ -13,7 +13,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/* Sections
+/* divs
    ========================================================================== */
 
 /**
@@ -33,7 +33,7 @@ main {
 }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
+ * Correct the font size and margin on `h1` elements within `div` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
