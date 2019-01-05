@@ -8,12 +8,13 @@
     80% { opacity: 0; }
     100% { opacity: 0; }
 }
-@keyframes scroll-down {
-  0 {height: 0;}
+
+@keyframes scroll-up {
+  from {height: 0;}
   50% {height: 80px;}
-  51% {height: 80px; transform-origin: bottom;}
-  100% {height: 0px;}
+  51% {height: 0;}
 }
+
 @keyframes rot {
   from {transform: rotatey(0);}
 

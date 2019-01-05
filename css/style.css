@@ -316,18 +316,32 @@ input[type='checkbox'] {
   transform: rotate(0deg);
 
 }
+
 .headtext-center:before {
-  content:'';
+  content: '';
+  display: block;
   height: 0px;
   width: 1px;
-  background-color: white;
   position: absolute;
-  bottom:-130px;
-  opacity: .8;
-  border: 1px solid red;
-  transform-origin: left top;
-  animation: scroll-down 2.5s ease-in-out forwards infinite;
+  background-color: white;
+  top:300px;
+  opacity: 1;
+  /* border: 1px solid blue; */
+  animation: scroll-up 2.5s ease-in-out forwards infinite;
 }
+.headtext-center:after {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 1px;
+  position: absolute;
+  background-color: white;
+  bottom:-135px;
+  opacity: 1;
+  /* border: 1px solid blue; */
+  animation: scroll-up 2.5s ease-in-out forwards reverse infinite;
+}
+
 .round-btn {
   background-color: #c61673;
   border-radius: 50%;
@@ -1240,9 +1254,14 @@ footer {
     background-color: #0005;
     margin: 0;
   }
-
+  .move {
+    height: 60px;
+  }
   .headtext-center span {
     font-size: 48px;
   }
-
+  .first-info {
+    height: calc(100vh - 100px);
+    width: 100%;
+  }
 }
