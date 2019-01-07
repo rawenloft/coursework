@@ -1,0 +1,393 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.ttf');
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.5s;
+}
+html,body {
+  background-color: grey;
+  width: 100%;
+}
+h2 {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #424242;
+  letter-spacing: 1px;
+}
+.main-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+/* -------------------------------------------------- */
+
+/*Библиотека Water???
+Наладить анимацию слова, подключить шрифты, logo.
+Разобраться с кнопками
+ */
+/* First section and header.*/
+header {
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  color: #fff;
+  position: fixed;
+  top:0;
+  background-color: transparent;
+  /* box-shadow: 0 0 12px 0 #2d2d2d; *//* HACK: when scroll! */
+
+}
+header .logo {
+
+}
+header .logo span {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  color: white;
+  letter-spacing: 1px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.logo>a, .menu ul li a {
+  color:#fff;
+  text-decoration: none;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+nav ul li {
+  padding: 10px 0;
+  position: relative;
+  text-decoration: none;
+
+}
+nav>ul>li>a {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+nav>ul>li{
+  margin-left: 20px;
+}
+
+.menu>input[type='checkbox'] + label {
+  position:absolute;
+  top:25%;
+  right: 10%;
+  display: none;
+}
+input[type='checkbox'] {
+  display: none;
+}
+.menu label i {
+  width: 44px;
+  height: 34px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 34px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.menu label i:hover {
+  background-color: lightgrey;
+}
+.menu ul li a:focus:before{
+  content:'';
+  position: absolute;
+  left: -16px;
+  top: 15px;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: 6px solid #c61673;
+  z-index: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  animation: bulb 1.2s infinite forwards;
+}
+
+
+
+.first-info {
+
+  bottom: 0;
+  height: 100vh;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper {
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-image:url('../img/bg-top.jpg');
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+.headtext-center {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px;
+  position: relative;
+}
+
+.headtext-center p {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1.8em;
+  text-align: center;
+  color: #fff;
+
+}
+
+.headtext-center span {
+  display: inline-block;
+  font-size: 80px;
+  font-weight: 600;
+  color: #f00;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+}.text-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.move {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  position: relative;
+
+}
+.move span {
+  display: inline;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  color: #fff;
+  -webkit-animation: fade-in 15s linear infinite 0s;
+  -ms-animation: fade-in 15s linear infinite 0s;
+  animation: fade-in 15s linear infinite 0s;
+}
+
+.move span:nth-child(2) {
+  -webkit-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  animation-delay: 5s;
+  color: #fff;
+}
+.move span:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    animation-delay: 10s;
+    color: #fff;
+}
+
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  padding:0 20px;
+  border: 1px solid #c61673;
+  background-color: #c61673;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 20px;
+  position: relative;
+  transition:all 0.3s;
+  border-radius: 0;
+  overflow: hidden;
+}
+.btn span.btn-text, div.btn-text {
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-family: 'Poppins',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 1;
+  position: relative;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  border-color: transparent transparent transparent #000;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  border-color: transparent #000 transparent transparent;
+}
+.btn:hover {
+  color:#fff;
+  border-color: #000;
+
+}
+.btn:hover:before, .btn:hover:after {
+  transition: all .3s;
+  border-width: 50px 160px;
+}
+.btn:hover:before {
+  border: 48px solid transparent;
+  border-top: 50px solid transparent;
+  border-right: 0px solid transparent;
+  border-left: 159px solid #000;
+  width: 100%;
+
+}
+.btn:hover:after {
+  border: 48px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 159px solid #000;
+  width: 100%;
+
+}
+.btn::before, .btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  transform: rotate(0deg);
+
+}
+
+.headtext-center:before {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 1px;
+  position: absolute;
+  background-color: white;
+  top:300px;
+  opacity: 1;
+  /* border: 1px solid blue; */
+  animation: scroll-up 2.5s ease-in-out forwards infinite;
+}
+.headtext-center:after {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 1px;
+  position: absolute;
+  background-color: white;
+  bottom:-135px;
+  opacity: 1;
+  /* border: 1px solid blue; */
+  animation: scroll-up 2.5s ease-in-out forwards reverse infinite;
+}
+
+.round-btn {
+  background-color: #c61673;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  color: #fff;
+  line-height: 70px;
+
+}
+/* --------------------------------------- */
+/* Анимация слайдера, точки, анимация фото, кнопки */
+/* Section two: slider and about */
+
+
+@media only screen and (max-width:768px) {
+  nav ul li{
+    margin: 0 !important;
+  }
+  .menu>ul {
+    display: none;
+  }
+  .menu label {
+    display: block !important;
+  }
+  .menu input[type='checkbox']:checked ~ ul {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top:100%;
+    left:0;
+    background-color: #0005;
+    margin: 0;
+  }
+  .move {
+    height: 60px;
+  }
+  .headtext-center span {
+    font-size: 48px;
+  }
+  .header-wrapper {
+    background-size: 768px;
+
+  }
+}
