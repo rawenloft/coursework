@@ -10,10 +10,16 @@
 }
 
 @keyframes scroll-up {
-  from {height: 0;}
-  50% {height: 80px;}
-  51% {height: 0;}
+    0% {clip: rect(0,auto,0,auto);}
+    80% {clip: rect(0,auto,82px,auto);}
+    100% {clip: rect(82px,auto,82px,auto);}
 }
+@-webkit-keyframes scroll-up {
+    0% {clip: rect(0,auto,0,auto);}
+    80% {clip: rect(0,auto,82px,auto);}
+    100% {clip: rect(82px,auto,82px,auto);}
+}
+
 
 @keyframes rot {
   from {transform: rotatey(0);}
