@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="shortcut icon" href=" ">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
  
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.min.css">
+<link rel="stylesheet" href="owl-carousel/css/owl.carousel.css">
+<link rel="stylesheet" href="owl-carousel/css/owl.theme.default.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="owl-carousel/js/owl.carousel.js"></script>
 
 
 
@@ -26,7 +26,7 @@
   <div class="top-wrapper">
     <div class="container">
       <div class="menu">
-        <div class="logo">
+        <div class="logo" id="home">
           <a href="#"><span>Jamiya</span></a>
         </div>
 
@@ -56,7 +56,7 @@
         </nav>
       </div>
       
-      <div class="first-info" id="home">
+      <div class="first-info">
 
             <div id="house" class="headtext-center">
               <p>Hello everyone! I'm John Doe.<br />
@@ -80,51 +80,48 @@
     <div class="about-wrapper">
     	<div class="container">
     		<div class="about-info" id="about">
-		      <div class="slider">
-		        <div class="skill">
-		          <img src="img/slide.jpg" alt="">
-		          <div class="my-skills">
-		            <i class="fa fa-anchor"></i>
-		            <h3>Web Developing</h3>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		              Placeat praesentium, amet saepe. Nam doloremque cum voluptas, vero.</p>
-		          </div>
-		        </div>
-		        <div class="skill">
-		          <img src="img/slide.jpg" alt="">
-		          <div class="my-skills">
-		            <i class="fa fa-building"></i>
-		            <h3>Web Design</h3>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		              Natus laudantium dolores libero doloremque atque saepe quisquam cumque fugit. Vel nisi.</p>
-		          </div>
-		        </div>
-		        <div class="skill">
-		          <img src="img/slide.jpg" alt="">
-		          <div class="my-skills">
-		            <i class="fa fa-beer"></i>
-		            <h3>Photography</h3>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		              Fuga aperiam provident et repellendus cupiditate magni consectetur nesciunt vitae.</p>
-		          </div>
-		        </div>
-		        <div class="skill">
-		          <img src="img/slide.jpg" alt="">
-		          <div class="my-skills">
-		            <i class="fa fa-pencil"></i>
-		            <h3>Article Writing</h3>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		              Soluta aliquam labore sequi neque quae beatae fugiat temporibus sint optio recusandae?</p>
-		          </div>
-		        </div>
-		        <div class="skill">
-		          <img src="img/slide.jpg" alt="">
-		          <div class="my-skills">
-		            <i class="fa fa-building"></i>
-		            <h3>SEO</h3>
-		            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		              Odit rem ipsum eos possimus. Laboriosam delectus repellendus doloremque quidems!</p>
-		          </div>
+		      <div class="owl-carousel slider" id="myCarousel" data-ride="carousel">
+		      	
+			        <div class="item skill active">
+			          <img src="img/slide.jpg" alt="">
+			          <div class="my-skills">
+			            <i class="fa fa-anchor"></i>
+			            <h3>Web Developing</h3>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			          </div>
+			        </div>
+			        <div class="item skill">
+			          <img src="img/slide.jpg" alt="">
+			          <div class="my-skills">
+			            <i class="fa fa-building"></i>
+			            <h3>Web Design</h3>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			          </div>
+			        </div>
+			        <div class="item skill">
+			          <img src="img/slide.jpg" alt="">
+			          <div class="my-skills">
+			            <i class="fa fa-beer"></i>
+			            <h3>Photography</h3>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			          </div>
+			        </div>
+			        <div class="item skill">
+			          <img src="img/slide.jpg" alt="">
+			          <div class="my-skills">
+			            <i class="fa fa-pencil"></i>
+			            <h3>Article Writing</h3>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			          </div>
+			        </div>
+			        <div class="item skill">
+			          <img src="img/slide.jpg" alt="">
+			          <div class="my-skills">
+			            <i class="fa fa-building"></i>
+			            <h3>SEO</h3>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			          </div>
+			      
 		        </div>
 		      </div>
 		      <div class="about-me">
@@ -133,7 +130,7 @@
 		          <span></span>
 		          <span></span>
 		          <span></span>
-		          <a href="https://www.youtube.com">
+		          <a href="https://www.youtube.com" target="_blank">
 		            <i class="fa fa-play round-btn"></i>
 		          </a>
 		          <img src="img/about-img.jpeg" alt="">
@@ -149,32 +146,32 @@
 		            <ul>
 		              <li><a href="#contact">Contact Me</a></li>
 		              <li>
-		                <a href="www.facebook.com" target="_blank">
+		                <a href="https://www.facebook.com" target="_blank">
 		                  <i class="fa fa-facebook"></i>
 		                </a>
 		              </li>
 		              <li>
-		                <a href="www.twitter.com" target="_blank">
+		                <a href="https://www.twitter.com" target="_blank">
 		                  <i class="fa fa-twitter"></i>
 		                </a>
 		              </li>
 		              <li>
-		                <a href="www.pinterest.com" target="_blank">
+		                <a href="https://www.pinterest.com" target="_blank">
 		                  <i class="fa fa-pinterest-p"></i>
 		                </a>
 		              </li>
 		              <li>
-		                <a href="www.linkedin.com" target="_blank">
+		                <a href="https://www.linkedin.com" target="_blank">
 		                  <i class="fa fa-linkedin"></i>
 		                </a>
 		              </li>
 		              <li>
-		                <a href="www.behance.com" target="_blank">
+		                <a href="https://www.behance.com" target="_blank">
 		                  <i class="fa fa-behance"></i>
 		                </a>
 		              </li>
 		              <li>
-		                <a href="www.instagram.com" target="_blank">
+		                <a href="https://www.instagram.com" target="_blank">
 		                  <i class="fa fa-instagram"></i>
 		                </a>
 		              </li>
@@ -189,6 +186,28 @@
   </div>
 
   
-  <script type="text/javascript" src="js/jquery.scrolly.js"></script>
+  <script>
+	$(document).ready(function() {
+		 $(".owl-carousel").owlCarousel({
+		 nav:false,
+		 loop:true,
+		 autoplay:true,
+		 smartSpeed:1000,
+		 autoplayTimeout:2000,
+		 responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+		})
+	});
+  </script>
 </body>
 </html>
+
