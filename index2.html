@@ -12,17 +12,16 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
- 
-<link rel="stylesheet" href="owl-carousel/css/owl.carousel.css">
-<link rel="stylesheet" href="owl-carousel/css/owl.theme.default.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="owl-carousel/js/owl.carousel.js"></script>
-
-
+<!-- Карусель -->
+  <link rel="stylesheet" href="owl-carousel/css/owl.carousel.css">
+  <link rel="stylesheet" href="owl-carousel/css/owl.theme.default.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="owl-carousel/js/owl.carousel.js"></script>
 
   <title>Alex Khrenov Portfolio</title>
 </head>
 <body>
+  <!-- Первый блок - меню -->
   <div class="top-wrapper">
     <div class="container">
       <div class="menu">
@@ -55,7 +54,7 @@
           </ul>
         </nav>
       </div>
-      
+
       <div class="first-info">
 
             <div id="house" class="headtext-center">
@@ -75,13 +74,13 @@
     	</div>
     </div>
 
-
+<!-- Второй блок - Обо мне -->
 
     <div class="about-wrapper">
     	<div class="container">
     		<div class="about-info" id="about">
 		      <div class="owl-carousel slider" id="myCarousel" data-ride="carousel">
-		      	
+
 			        <div class="item skill active">
 			          <img src="img/slide.jpg" alt="">
 			          <div class="my-skills">
@@ -121,19 +120,21 @@
 			            <h3>SEO</h3>
 			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
 			          </div>
-			      
+
 		        </div>
 		      </div>
 		      <div class="about-me">
 		        <div class="about-photo">
-		          <span></span>
-		          <span></span>
-		          <span></span>
-		          <span></span>
-		          <a href="https://www.youtube.com" target="_blank">
-		            <i class="fa fa-play round-btn"></i>
-		          </a>
-		          <img src="img/about-img.jpeg" alt="">
+              <div class="img">
+  		          <span></span>
+  		          <span></span>
+  		          <span></span>
+  		          <span></span>
+                <img src="img/about-img.jpeg" alt="">
+  		          <a href="https://www.youtube.com" target="_blank">
+  		            <i class="fa fa-play round-btn"></i>
+  		          </a>
+              </div>
 		        </div>
 		        <div class="about-text">
 		          <h2>I Am <span>John Doe</span></h2>
@@ -182,10 +183,10 @@
 		      </div>
 		    </div>
 	   </div>
-	  
+
   </div>
 
-  
+
   <script>
 	$(document).ready(function() {
 		 $(".owl-carousel").owlCarousel({
@@ -210,4 +211,3 @@
   </script>
 </body>
 </html>
-
