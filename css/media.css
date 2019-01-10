@@ -14,6 +14,9 @@
   .container {
     width: 960px;
   }
+  .about-text h2 {
+    width: 100%;
+  }
 }
 
 
@@ -69,6 +72,10 @@
   }
   .about-info {
     padding: 80px 15px;
+  }
+  .about-text h2 {
+    width: 80%;
+  }
 }
 
 
@@ -116,6 +123,9 @@
   .about-photo:before {
     overflow: hidden;
     width: 160px;
+  }
+  .about-text h2 {
+    width: 85%;
   }
 }
 @media only screen and (max-width:320px) {
@@ -168,5 +178,13 @@
   }
   .about-text h2 {
     width: 100%;
+  }
+  .dots h2:before {
+    top:55px;
+    right: 20px;
+  }
+  .dots h2:after {
+    top:58px;
+    right: 0px;
   }
 }

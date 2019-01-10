@@ -492,6 +492,8 @@ span.btn-text {
   font-family: 'Poppins',sans-serif;
   font-weight: 600;
   font-size: 42px;
+  position: relative;
+  width: 50%;
 }
 
 .about-text h3 {
@@ -515,6 +517,16 @@ span.btn-text {
   font-size: 42px;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+.dots h2:before {
+  right: -20px;
+  top: -10px;
+}
+.dots h2:after {
+  right: -40px;
+  top: -7px;
 }
 .social-contact-me {
   margin-top: 20px;
@@ -525,10 +537,10 @@ span.btn-text {
   justify-content: space-between;
 }
 .social-contact-me>ul>li:not(:first-child) {
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 23px;
   text-align: center;
-  margin-left: 15px;
+  
 }
 .social-contact-me>ul>li:first-child {
   margin-right: 30px;
@@ -546,6 +558,7 @@ span.btn-text {
 
 .social-contact-me>ul>li>a {
   font-size: 14px;
+  line-height: 23px;
   color: #000;
 }
 .social-contact-me>ul>li>a:hover {

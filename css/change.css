@@ -39,8 +39,7 @@
 }
 
 
-
-.dots h3:after {
+.dots h2:before {
   position: absolute;
   content: '';
   height: 15px;
@@ -50,10 +49,9 @@
   margin-left: 20px;
   margin-top: 19px;
   border-radius: 7.5px;
-  right: 310px;
-  top: -8px;
+  
 }
-.dots span:after {
+.dots h2:after {
   position: absolute;
   content: '';
   height: 10px;
@@ -63,6 +61,5 @@
   margin-left: 45px;
   margin-top: 19px;
   border-radius: 7.5px;
-  right: 290px;
-  top: -5px;
+  
 }
