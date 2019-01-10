@@ -57,7 +57,7 @@ a:hover {
 
 /*Библиотека Water???подключить шрифты, logo.
 МЕНЮ!!!! Скролл и параллакс!!!
-Разобраться с кнопками, Ховер кнопок, адаптивность.
+Разобраться с кнопками, Ховер кнопок.
  */
 /* First section and header.*/
 .top-wrapper {
@@ -351,8 +351,7 @@ span.btn-text {
 
 }
 /* --------------------------------------- */
-/* Подложака из точек, кнопки, проверить адаптивность,
-параллакс, точки!!! */
+/* Адаптивность,параллакс, точки перепроверить!!! */
 /* Section two: slider and about */
 
 /*  */
@@ -565,3 +564,85 @@ span.btn-text {
   color:#666;
 }
 /* ====================================== */
+/* Запихнуть розовый фоню, анимация иконок, счетчики? */
+/* Section three: my Numbers */
+.numbers-wrapper {
+  background:rgba(0, 0, 0, 0.82) url('../img/counter.jpg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.my-numbers {
+  width: 100%;
+  height: 80vh;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.numbers-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  text-align: left;
+  padding: 50px 120px;
+  width: 550px;
+  height: 100%;
+  line-height: 1.8em;
+  background-color: #c61673;
+  clip-path:polygon(16% 0,100% 0, 84% 100%, 0 100%);
+}
+.numbers-text h2, .numbers-text p {
+  color: #fff;
+}
+.my-digits {
+  width: 50%;
+  position: relative;
+  right: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: space-around;
+
+}
+.stat-box {
+  width: 50%;
+  text-align: left;
+  vertical-align: middle;
+  padding: 10px;
+
+}
+.stat-box i {
+  font-size: 25px;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  z-index:1;
+}
+.my-digits .round-btn::after {
+  content:'';
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border:6px solid #c61673;
+  background-color: transparent;
+  top:-6px;
+  left:-6px;
+  z-index: -1;
+  animation: bulb 1.2s infinite forwards;
+}
+.stat-box h2 {
+  margin-top: 20px;
+  color: #fff;
+}
+.stat-box span {
+  color:#fff;
+  margin-top: 10px;
+}
+
+/*===========================================*/
+/* ------------------------------------------ */
