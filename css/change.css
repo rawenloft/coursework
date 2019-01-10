@@ -1,0 +1,68 @@
+.over span {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  z-index: 2;
+}
+.over span:first-child {
+  left: 0;
+}
+.over span:nth-child(2),.over span:nth-child(4) {
+  right: 0;
+}
+.over span:nth-child(3),.over span:nth-child(4) {
+  bottom: 0;
+}
+.img {
+  position: relative;
+  width: 100%;
+}
+.img:hover {
+  width: 100%;
+}
+.img:hover > span ~ img {
+
+  transition: 0.2s;
+  width: 100%;
+}
+.img:hover > span:first-child:hover ~ img {
+  transform: perspective(700px) rotateX(10deg) rotateY(-10deg);
+}
+.img:hover > span:nth-child(2):hover ~ img {
+  transform: perspective(700px) rotateX(10deg) rotateY(10deg);
+}
+.img:hover > span:nth-child(3):hover ~ img {
+  transform: perspective(700px) rotateX(-10deg) rotateY(-10deg);
+}
+.img:hover > span:nth-child(4):hover ~ img {
+  transform: perspective(700px) rotateX(-10deg) rotateY(10deg);
+}
+
+
+
+.dots h3:after {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  background-color: #c61673;
+  z-index: 1;
+  margin-left: 20px;
+  margin-top: 19px;
+  border-radius: 7.5px;
+  right: 310px;
+  top: -8px;
+}
+.dots span:after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  background-color: #c61673;
+  z-index: 1;
+  margin-left: 45px;
+  margin-top: 19px;
+  border-radius: 7.5px;
+  right: 290px;
+  top: -5px;
+}

@@ -11,50 +11,53 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600" rel="stylesheet">
 <!-- Карусель -->
   <link rel="stylesheet" href="owl-carousel/css/owl.carousel.css">
   <link rel="stylesheet" href="owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="css/change.css">
+  <link rel="stylesheet" href="css/media.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="owl-carousel/js/owl.carousel.js"></script>
-
+  <script src="js/jquery.scrolly.js"></script>
   <title>Alex Khrenov Portfolio</title>
 </head>
 <body>
   <!-- Первый блок - меню -->
   <div class="top-wrapper">
-    <div class="container">
-      <div class="menu">
-        <div class="logo" id="home">
-          <a href="#"><span>Jamiya</span></a>
+      <div class="menu-wrapper">
+        <div class="menu">
+          <div class="logo" id="home">
+            <a href="#"><span>Jamiya</span></a>
+          </div>
+
+          <nav class="nav" >
+            <input type="checkbox" id="lite">
+            <label for="lite"><i class="fa fa-bars"></i></label>
+            <ul>
+              <li>
+                <a href="#house">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#service">Service</a>
+              </li>
+              <li>
+                <a href="#testimonial">Testimonial</a>
+              </li>
+              <li>
+
+                <a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-
-        <nav class="nav">
-          <input type="checkbox" id="lite">
-          <label for="lite"><i class="fa fa-bars"></i></label>
-          <ul>
-            <li>
-              <a href="#house">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#service">Service</a>
-            </li>
-            <li>
-              <a href="#testimonial">Testimonial</a>
-            </li>
-            <li>
-
-              <a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
       </div>
-
+        <div class="container">
       <div class="first-info">
 
             <div id="house" class="headtext-center">
@@ -125,7 +128,7 @@
 		      </div>
 		      <div class="about-me">
 		        <div class="about-photo">
-              <div class="img">
+              <div class="img over">
   		          <span></span>
   		          <span></span>
   		          <span></span>
@@ -136,8 +139,8 @@
   		          </a>
               </div>
 		        </div>
-		        <div class="about-text">
-		          <h2>I Am <span>John Doe</span></h2>
+		        <div class="about-text dots">
+		          <h2>I Am<span> John Doe</span></h2>
 		          <h3>I know the value of time and money & i use it well.</h3>
 		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 		            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
@@ -178,7 +181,7 @@
 		              </li>
 		            </ul>
 		          </div>
-		          <a href="#contact" class="btn"><span class="btn-text">Hire me</a>
+		          <a href="#contact" class="btn"><span class="btn-text">Hire me</span></a>
 		        </div>
 		      </div>
 		    </div>
@@ -187,6 +190,9 @@
   </div>
 
 
+
+
+  <script src="js/script.js"></script>
   <script>
 	$(document).ready(function() {
 		 $(".owl-carousel").owlCarousel({
@@ -199,8 +205,8 @@
                     0:{
                         items:1
                     },
-                    600:{
-                        items:3
+                    768:{
+                        items:2
                     },
                     1000:{
                         items:3
