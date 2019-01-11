@@ -64,8 +64,8 @@
     font-size: 48px;
   }
   .top-wrapper {
-    background-size: 100%,768px;
-    background-position: 100% 100%, top;
+    background-size: 100%,768px cover;
+    background-position: 100% 93%, top;
   }
   .my-skills {
     padding: 20px;
@@ -75,6 +75,20 @@
   }
   .about-text h2 {
     width: 80%;
+  }
+  .numbers-text {
+    padding: 0 50px 0 50px;
+    width: 400px;
+  }
+  .my-numbers {
+    padding: 0;
+  }
+  .my-digits {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .numbers-wrapper .container {
+    width: 100%;
   }
 }
 
@@ -127,6 +141,21 @@
   .about-text h2 {
     width: 85%;
   }
+  .my-numbers, .my-digits {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .my-numbers {
+    padding-top: 100px;
+  }
+  .my-digits {
+    padding-top: 50px;
+  }
+  .numbers-text {
+    padding: 40px 60px;
+    text-align: center;
+  }
+
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -186,5 +215,15 @@
   .dots h2:after {
     top:58px;
     right: 0px;
+  }
+  .numbers-text {
+    width: 100%;
+    padding: 20px 30px;
+  }
+  .numbers-wrapper .container {
+    padding: 0;
+  }
+  .numbers-text h2 {
+    line-height: 1.2em;
   }
 }

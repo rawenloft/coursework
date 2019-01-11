@@ -575,7 +575,7 @@ span.btn-text {
 }
 .my-numbers {
   width: 100%;
-  height: 80vh;
+  /*height: 75vh;*/
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -586,11 +586,13 @@ span.btn-text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  -ms-align-self: stretch;
+  align-self: stretch;
   flex-flow: column wrap;
   text-align: left;
   padding: 50px 120px;
   width: 550px;
-  height: 100%;
+  /*height: 100%;*/
   line-height: 1.8em;
   background-color: #c61673;
   -webkit-clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
@@ -600,8 +602,14 @@ span.btn-text {
 .numbers-text h2, .numbers-text p {
   color: #fff;
 }
+.numbers-text p {
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.8em;
+}
 .my-digits {
   width: 50%;
+  padding: 80px 20px;
   position: relative;
   right: 0;
   display: flex;
@@ -612,10 +620,12 @@ span.btn-text {
 }
 .stat-box {
   width: 50%;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   padding: 10px;
-
+}
+.stat-box:first-child, .stat-box:nth-child(2){
+  margin-bottom: 20px;
 }
 .stat-box i {
   font-size: 25px;
@@ -623,6 +633,7 @@ span.btn-text {
   border-radius: 50%;
   position: relative;
   z-index:1;
+  line-height: 60px;
 }
 .my-digits .round-btn::after {
   content:'';
@@ -632,19 +643,124 @@ span.btn-text {
   position: absolute;
   border:6px solid #c61673;
   background-color: transparent;
-  top:-6px;
-  left:-6px;
+  top:-11px;
+  left:-11px;
   z-index: -1;
   animation: bulb 1.2s infinite forwards;
 }
 .stat-box h2 {
   margin-top: 20px;
   color: #fff;
+  font-size: 32px;
+  font-weight: 500;
 }
 .stat-box span {
   color:#fff;
   margin-top: 10px;
 }
-
+.stat-box .round-btn {
+  width: 60px;
+  height: 60px;
+}
+/*Вроде неплохо, прикрутить прокрутку до цифр.*/
 /*===========================================*/
 /* ------------------------------------------ */
+/* Section four: My Portfolio and pictures */
+.my-portfolio {
+  padding: 80px;
+}
+.folio-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.folio-title h2 {
+  position: relative;
+}
+.folio-title p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8em;
+}
+.sort-images {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.sort-images li {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  color:#666;
+  padding: 5px 20px;
+}
+.image-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2vw;
+  position: relative;
+  justify-content: start;
+}
+.img-box {
+  position: relative;
+}
+.image-wrapper img {
+  width: 100%;
+  display: grid;
+
+}
+
+.item-text {
+  width: 180px;
+  height: 80px;
+  padding:10px;
+  position: absolute;
+  top:100px;
+  left: 70px;
+  left: center;
+
+  display: none;
+  z-index: 3;
+}
+.item-text>ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #0008;
+  padding: 10px;
+
+}
+.item-text li i {
+  width: 40px;
+  height: 40px;
+  font-size: 17px;
+  background-color: #c61673;
+  color:#fff;
+  border: 1px solid #c61673;
+  line-height: 40px;
+  text-align: center;
+
+}
+.item-text li:first-child {
+  align-self: flex-start;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.image-wrapper img:hover ~.item-text {
+  display: block;
+  transition: all 0.3s ease;
+
+}
+/* ------------------------------------------- */
