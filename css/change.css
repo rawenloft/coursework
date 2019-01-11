@@ -4,7 +4,7 @@
   width: 50%;
   z-index: 2;
 }
-.over span:first-child {
+.over span:first-child,.over span:nth-child(3) {
   left: 0;
 }
 .over span:nth-child(2),.over span:nth-child(4) {
@@ -15,9 +15,6 @@
 }
 .img {
   position: relative;
-  width: 100%;
-}
-.img:hover {
   width: 100%;
 }
 .img:hover > span ~ img {

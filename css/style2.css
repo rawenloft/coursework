@@ -666,13 +666,17 @@ span.btn-text {
 /*===========================================*/
 /* ------------------------------------------ */
 /* Section four: My Portfolio and pictures */
+.portfolio-wrapper {
+  background-color: #fff;
+  width: 100%;
+}
 .my-portfolio {
-  padding: 80px;
+  padding: 80px 0;
 }
 .folio-title {
   display: block;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .folio-title h2 {
   position: relative;
@@ -682,10 +686,30 @@ span.btn-text {
   color: #666;
   line-height: 1.8em;
 }
+.folio-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+.folio-wrapper ul {
+  display: block;
+  width: 100%;
+}
+
 .sort-images {
-  display: inline-block;
   text-align: center;
   width: 100%;
+  margin-bottom: 2vh;
+  align-self: stretch;
+  margin-bottom: 40px;
+
 }
 .sort-images li {
   display: inline-block;
@@ -694,37 +718,50 @@ span.btn-text {
   font-size: 16px;
   color:#666;
   padding: 5px 20px;
-}
-.image-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 2vw;
   position: relative;
-  justify-content: start;
 }
-.img-box {
-  position: relative;
+.sort-images li:active:before {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: 6px solid #c61673;
+  z-index: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  animation: bulb 1.2s infinite forwards;
+}
+
+.img-box:nth-of-type(1),.img-box:nth-of-type(2) {
+  width: 48%;
+  margin-bottom: 2vw;
+}
+.img-box:nth-of-type(n+3) {
+  width: 31%;
+
 }
 .image-wrapper img {
   width: 100%;
   display: grid;
-
 }
-
+.img-box img {
+  position: relative;
+  display: flex;
+}
 .item-text {
-  width: 180px;
-  height: 80px;
-  padding:10px;
+  width: 200px;
+  height: 100px;
+  padding:20px;
   position: absolute;
-  top:100px;
-  left: 70px;
-  left: center;
-
-  display: none;
-  z-index: 3;
+  top:50%;
+  left:50%;
+  display:block;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  z-index: 2;
 }
 .item-text>ul {
   display: flex;
@@ -758,9 +795,8 @@ span.btn-text {
   font-size: 22px;
 }
 
-.image-wrapper img:hover ~.item-text {
-  display: block;
-  transition: all 0.3s ease;
-
+.folio-wrapper .img-box:hover ~ .item-text {
+  opacity: 1;
 }
+
 /* ------------------------------------------- */
