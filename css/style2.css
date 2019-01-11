@@ -539,7 +539,7 @@ span.btn-text {
   width: 27px;
   height: 23px;
   text-align: center;
-  
+
 }
 .social-contact-me>ul>li:first-child {
   margin-right: 30px;
@@ -593,7 +593,9 @@ span.btn-text {
   height: 100%;
   line-height: 1.8em;
   background-color: #c61673;
-  clip-path:polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  -webkit-clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  -o-clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
 }
 .numbers-text h2, .numbers-text p {
   color: #fff;
