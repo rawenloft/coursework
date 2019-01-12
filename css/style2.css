@@ -680,6 +680,15 @@ span.btn-text {
 }
 .folio-title h2 {
   position: relative;
+  text-align: center;
+}
+.folio-title h2:before {
+  right: 425px;
+  top:0;
+}
+.folio-title h2:after {
+  right: 405px;
+  top:3px;
 }
 .folio-title p {
   font-size: 15px;
@@ -734,7 +743,9 @@ span.btn-text {
   transform: scale(0.8);
   animation: bulb 1.2s infinite forwards;
 }
-
+.img-box {
+  padding: 10px;
+}
 .img-box:nth-of-type(1),.img-box:nth-of-type(2) {
   width: 48%;
   margin-bottom: 2vw;
@@ -745,24 +756,36 @@ span.btn-text {
 }
 .image-wrapper img {
   width: 100%;
-  display: grid;
+  height: auto;
 }
-.img-box img {
+.img-box {
   position: relative;
   display: flex;
 }
 .item-text {
-  width: 200px;
-  height: 100px;
-  padding:20px;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  list-style: none;
   position: absolute;
-  top:50%;
-  left:50%;
-  display:block;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
+  opacity: 1;
+  display: none;
+  transition: width 0.3s ease 0s;
+  left: 50%;
   z-index: 2;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
+/*.item-text:before {
+  position: absolute;
+  content: '';
+  height: calc(100% + 70px);
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 50%;
+  top: -32px;
+  transition: all 0.3s ease 0s;
+}*/
 .item-text>ul {
   display: flex;
   justify-content: space-around;
@@ -794,9 +817,14 @@ span.btn-text {
   font-weight: 500;
   font-size: 22px;
 }
-
-.folio-wrapper .img-box:hover ~ .item-text {
-  opacity: 1;
+.img-box .img:hover ~ .item-text, .item-text:hover {
+  display: block;
 }
 
+.portfolio-wrapper input {
+  display: none;
+}
+.image-wrapper input[type=checkbox; id = all]:checked ~ img:not([rel ~="web"])  {
+  display: none;
+}
 /* ------------------------------------------- */

@@ -2,7 +2,7 @@
   position: absolute;
   height: 50%;
   width: 50%;
-  z-index: 2;
+  z-index: 1;
 }
 .over span:first-child,.over span:nth-child(3) {
   left: 0;
@@ -18,7 +18,7 @@
   width: 100%;
 }
 .img:hover > span ~ img {
-
+  /*z-index: 1;*/
   transition: 0.2s;
   width: 100%;
 }
@@ -34,6 +34,7 @@
 .img:hover > span:nth-child(4):hover ~ img {
   transform: perspective(700px) rotateX(-10deg) rotateY(10deg);
 }
+
 
 
 .dots h2:before {
