@@ -59,6 +59,14 @@
   .features-items {
     padding: 0 0 60px 30px;
   }
+  .skill-header h2:before {
+  top:0;
+  right: -20px;
+  }
+  .skill-header h2:after {
+    top:3px;
+    right: -40px;
+  }
 }
 
 
@@ -176,6 +184,18 @@
   .features-items {
     width: 40%;
   }
+  .skill-header h2:before {
+  top:50px;
+  right: 190px;
+  }
+  .skill-header h2:after {
+    top:53px;
+    right: 170px;
+  }
+  .skill-proof {
+    padding-right: 10px;
+  }
+
 }
 
 
@@ -312,6 +332,23 @@
   .features-items {
     padding: 50px 0 0;
   }
+  .my-skill {
+    flex-flow: column wrap;
+  }
+  .skill-proof {
+    padding: 50px 15px 0;
+  }
+  .skill-header h2:before {
+  top:50px;
+  right: 255px;
+  }
+  .skill-header h2:after {
+    top:53px;
+    right: 235px;
+  }
+  .skill-bars ul {
+    padding-bottom: 0;
+  }
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -411,5 +448,19 @@
   .service-header h2:after {
     top:3px;
     right: 0px;
+  }
+  .my-skill:before {
+    top:10%;
+    width: 35%;
+    height: 30%;
+  
+  }
+  .skill-header h2:before {
+  top:50px;
+  right: 85px;
+  }
+  .skill-header h2:after {
+    top:53px;
+    right: 65px;
   }
 }
