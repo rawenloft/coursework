@@ -37,7 +37,7 @@
 
 
 
-.dots h2:before {
+.dots>h2:before {
   position: absolute;
   content: '';
   height: 15px;
@@ -46,10 +46,10 @@
   z-index: 1;
   margin-left: 20px;
   margin-top: 19px;
-  border-radius: 7.5px;
+  border-radius: 50%;
   
 }
-.dots h2:after {
+.dots>h2:after {
   position: absolute;
   content: '';
   height: 10px;
@@ -58,6 +58,6 @@
   z-index: 1;
   margin-left: 45px;
   margin-top: 19px;
-  border-radius: 7.5px;
+  border-radius: 50%;
   
 }

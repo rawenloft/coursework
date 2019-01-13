@@ -1,13 +1,17 @@
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:1441px) {
   .menu {
     padding: 0 70px !important;
   }
   .container {
     width: 1170px;
   }
+  .my-exp .text h2 {
+    width: 31%;
+  }
 }
 
-@media only screen and (max-width:992px){
+
+@media only screen and (max-width:1024px){
   .my-skills {
     padding: 20px;
   }
@@ -15,7 +19,27 @@
     width: 960px;
   }
   .about-text h2 {
+    width: 64%;
+  }
+  .folio-title h2:before {
+  right: 325px;
+  top:0;
+}
+  .folio-title h2:after {
+    right: 305px;
+    top:3px;
+  }
+  .my-exp .text h2 {
     width: 100%;
+
+  }
+  .text h2:before {
+  top:50px;
+  right: -5px;
+}
+  .text h2:after {
+    top:53px;
+    right: -25px;
   }
 }
 
@@ -30,6 +54,10 @@
   }
   .nav ul li{
     margin: 0 !important;
+    height: 40px;
+    margin: 8px 0;
+   /* width: 100%;
+    text-align: center;*/
   }
   .logo {
     margin-top: 0 !important;
@@ -46,11 +74,13 @@
   .nav input[type='checkbox']:checked ~ ul {
     display:flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    align-content: flex-start;
     position: absolute;
     width: 100%;
     max-width: 100vw;
+    height: 100vh;
     top:75px;
     left:0;
     background-color: black;
@@ -100,10 +130,25 @@
   right: 205px;
   top:0;
 }
-.folio-title h2:after {
-  right: 185px;
-  top:3px;
+  .folio-title h2:after {
+    right: 185px;
+    top:3px;
+  }
+  .exp-wrapper:first-child {
+    width: 30%;
+  }  
+  .exp-wrapper:last-child {
+    width: 70%;
+    padding: 100px 30px 80px;
+  }
+  .text h2:before {
+  top:0px;
+  right: 115px;
 }
+  .text h2:after {
+    top:3px;
+    right: 95px;
+  }
 }
 
 
@@ -185,11 +230,32 @@
    .folio-title h2:before {
   right: 35px;
   top:0;
-}
-.folio-title h2:after {
-  right: 15px;
-  top:3px;
-}
+  }
+  .folio-title h2:after {
+    right: 15px;
+    top:3px;
+  }
+  .my-exp {
+    flex-flow: column;
+  }
+  .exp-wrapper {
+    width: 100% !important;
+  }
+  .exp-wrapper:first-child {
+    height: 400px;
+  }
+  .exp-wrapper:last-child {
+    padding: 100px 15px 80px;
+  }
+  .text h2:before {
+  top:0px;
+  right: 45px;
+  }
+  .text h2:after {
+    top:3px;
+    right: 25px;
+  }
+  
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -270,5 +336,13 @@
   .folio-title h2:after {
     right: -15px;
     top:3px;
+  }
+  .text h2:before {
+  top:50px;
+  right: 10px;
+  }
+  .text h2:after {
+    top:53px;
+    right: -10px;
   }
 }
