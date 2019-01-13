@@ -6,7 +6,7 @@
     width: 1170px;
   }
   .my-exp .text h2 {
-    width: 31%;
+    width: 35%;
   }
 }
 
@@ -40,6 +40,24 @@
   .text h2:after {
     top:53px;
     right: -25px;
+  }
+  .service-header h2:before {
+  top:0;
+  right: 0px;
+  }
+  .service-header h2:after {
+    top:3px;
+    right: -20px;
+  }
+  .service-item span {
+    top: -31px;
+    left:0;
+  }
+  .features {
+    padding: 100px 10px;
+  }
+  .features-items {
+    padding: 0 0 60px 30px;
   }
 }
 
@@ -149,6 +167,15 @@
     top:3px;
     right: 95px;
   }
+  .service-header h2 {
+    width: 40%;
+  }
+  .features-text {
+    width: 60%;
+  }
+  .features-items {
+    width: 40%;
+  }
 }
 
 
@@ -255,7 +282,36 @@
     top:3px;
     right: 25px;
   }
-  
+  .service-header {
+    padding: 0;
+  }
+  .service-text {
+    flex-flow: column wrap;
+  }
+  .service-item {
+    width: 100%;
+  }
+  .service-header h2 {
+    width: 100%;
+  }
+  .service-header h2:before {
+  top:0;
+  right: 50px;
+  }
+  .service-header h2:after {
+    top:3px;
+    right: 30px;
+  }
+  .features {
+    flex-flow: column wrap;
+    padding: 100px 0;
+  }
+  .features-text, .features-items {
+    width: 100%;
+  }
+  .features-items {
+    padding: 50px 0 0;
+  }
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -344,5 +400,16 @@
   .text h2:after {
     top:53px;
     right: -10px;
+  }
+  .service-header h2 {
+    text-align: left;
+  }
+  .service-header h2:before {
+  top: 0px;
+  right: 20px;
+  }
+  .service-header h2:after {
+    top:3px;
+    right: 0px;
   }
 }

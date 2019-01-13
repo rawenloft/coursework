@@ -815,7 +815,6 @@ input[type='checkbox'] {
 /* Section seven: features and list of features, btn Hire */
 .features {
   width: 100%;
-  height: 100vh;
   background:transparent url('../img/features-image.jpg');
   background-size:cover;
   background-position:center;

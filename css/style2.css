@@ -863,18 +863,18 @@ span.btn-text {
 }
 .my-exp .text h2 {
   position: relative;
-  width: 69%;
+  width: 75%;
 }
 .my-exp > .text > p {
   margin: 10px 0 50px;
 }
 .text h2:before {
   top:0;
-  right: -30px;
+  right: 10px;
 }
 .text h2:after {
   top:3px;
-  right: -50px;
+  right: -10px;
 }
 .exp-wrapper>h2,.exp-wrapper p {
   text-align: left;
@@ -918,5 +918,177 @@ span.btn-text {
   padding: 10px 0 10px 70px;
   position: relative;
 }
-
+/*Точки, остальное вроде норм.*/
 /* ------------------------------------------- */
+/* Section six: My Service */
+.service-wrapper {
+  background-color: #f2f2f2;
+}
+.my-service {
+  padding: 100px 0 70px 0;
+}
+.service-header {
+  width: 100%;
+  text-align: center;
+}
+.service-text {
+  display: flex;
+  justify-content: space-between;
+}
+.service-header h2 {
+  position: relative;
+  width: 30%;
+  margin: 0 auto 15px;
+}
+.service-header h2:before {
+  top:0;
+  right: 20px;
+}
+.service-header h2:after {
+  top:3px;
+  right: 0px;
+}
+.service-header p {
+  line-height: 1.8em;
+  color: #666;
+  font-size: 15px;
+  margin: 15px 0 50px;
+}
+.service-item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  border-radius: 20px 0 20px 0;
+  background-color: #fff;
+  position: relative;
+  padding: 15px 20px 30px 15px;
+  margin: 20px 0 30px;
+}
+.service-item span {
+  display: block;
+  width: 100px;
+  height: 140px;
+  font-size: 90px;
+  color: #fff;
+  text-align: center;
+  line-height: 130px;
+  background: linear-gradient(135deg,#c61673 25%,#b01466 26%,#b01466 40%,#c61673 41%,#b01466 47%,#b01466 48%, #b01466 60%, #c61673 61%);
+  border-bottom-right-radius: -100px;
+  position: relative;
+  top: -9%;
+  left:0;
+  align-self: flex-start;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  border-top-right-radius: 2px;
+}
+.service-item i {
+  font-size: 60px;
+  color:#e6e4e4;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.service-item:hover.service-item i {
+  animation: rot .5s;
+}
+.service-item h3 {
+    color:#c61673;
+    margin-bottom: 20px;
+}
+.service-item p {
+  font-size: 15px;
+  line-height: 1.8em;
+  color:#666;
+  margin-bottom: 10px;
+}
+.service-item:before {
+  content:'\25e3';
+  color: #c61673;
+  position: absolute;
+  top:-27px;
+  left: 111px;
+  width: 20px;
+  font-size: 30px;
+}
+/*Выглядит неплохо, перепроверить всё.*/
+/* ------------------------------------------- */
+/* Section seven: features and list of features, btn Hire */
+.features-wrapper {
+  background:transparent url('../img/features-image.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 100px 0;
+}
+.features-text {
+  width: 70%;
+  color: #fff;
+  
+}
+.features-text h2 {
+  color: white;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.features-text p {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8em;
+  text-align: left;
+}
+.features-text a.btn {
+  display: block;
+  margin-top: 30px;
+  margin-left: 0;
+}
+.features-items {
+  width: 35%;
+  padding: 0 0 20px 40px;
+}
+.features-items ul {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+}
+.features-items li {
+  padding: 9px 40px;
+  border-bottom: 1px solid #383838;
+  background-color: #c61673;
+  color:#fff;
+  position: relative;
+  font-size: 15px;
+  overflow: hidden;
+}
+.features-items li::before {
+  content:'-';
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  width: 30px;
+  line-height: 30px;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  left: 0;
+  top:0;
+}
+.features-items li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------ */
