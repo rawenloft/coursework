@@ -65,7 +65,7 @@
   }
   .top-wrapper {
     background-size: 100%,768px cover;
-    background-position: 100% 93%, top;
+    background-position: bottom, top;
   }
   .my-skills {
     padding: 20px;
@@ -90,6 +90,20 @@
   .numbers-wrapper .container {
     width: 100%;
   }
+  .img-box:not(:last-of-type) {
+    width: 48%;
+  }
+  .img-box:last-of-type {
+    width: 100%;
+  }
+  .folio-title h2:before {
+  right: 205px;
+  top:0;
+}
+.folio-title h2:after {
+  right: 185px;
+  top:3px;
+}
 }
 
 
@@ -101,7 +115,7 @@
   }
   .top-wrapper {
     background-size: 100%,768px;
-    background-position: 100% 100%, top;
+    background-position: 100% calc(100% - 34px), top;
   }
   .menu {
     padding: 0 15px !important;
@@ -149,13 +163,33 @@
     padding-top: 100px;
   }
   .my-digits {
-    padding-top: 50px;
+    padding: 50px 0 0;
+  }
+  .stat-box {
+    width: 100%;
+  }
+  .stat-box h2 {
+    margin: 20px auto 10px;
   }
   .numbers-text {
     padding: 40px 60px;
     text-align: center;
   }
-
+  .sort-images li {
+    display: block;
+    padding: 8px 0;
+  }
+  .img-box:nth-of-type(n) {
+    width: 100%;
+  }
+   .folio-title h2:before {
+  right: 35px;
+  top:0;
+}
+.folio-title h2:after {
+  right: 15px;
+  top:3px;
+}
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -225,5 +259,16 @@
   }
   .numbers-text h2 {
     line-height: 1.2em;
+  }
+  .folio-title h2 {
+    text-align: left;
+  }
+  .folio-title h2:before {
+    right: 0px;
+    top:0;
+  }
+  .folio-title h2:after {
+    right: -15px;
+    top:3px;
   }
 }

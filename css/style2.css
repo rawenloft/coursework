@@ -69,7 +69,7 @@ a:hover {
   background-size:100%, cover;
   background-position: fixed;
   background-repeat: no-repeat,no-repeat;
-  background-position: bottom, top;
+  background-position: left 101%, top;
   padding: 0 auto;
 }
 .menu-wrapper {
@@ -564,7 +564,7 @@ span.btn-text {
   color:#666;
 }
 /* ====================================== */
-/* Запихнуть розовый фоню, анимация иконок, счетчики? */
+/*Aанимация иконок. */
 /* Section three: my Numbers */
 .numbers-wrapper {
   background:rgba(0, 0, 0, 0.82) url('../img/counter.jpg');
@@ -663,7 +663,6 @@ span.btn-text {
   height: 60px;
 }
 /*Вроде неплохо, прикрутить прокрутку до цифр.*/
-/*===========================================*/
 /* ------------------------------------------ */
 /* Section four: My Portfolio and pictures */
 .portfolio-wrapper {
@@ -827,4 +826,7 @@ span.btn-text {
 .image-wrapper input[type=checkbox; id = all]:checked ~ img:not([rel ~="web"])  {
   display: none;
 }
+/*Исправить переключатели, прокрутка, адаптивность,
+поправить появление на ховере*/
 /* ------------------------------------------- */
+/*===============================================*/
