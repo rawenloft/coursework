@@ -606,15 +606,15 @@
 		            <span>Web Developer</span>
 		          </div>
 		        </div>
-		        <div class="work-avatar owl-theme owl-controls " id="my-dots">
-		         <div class="owl-dots clicable">
-		         	 <div class="work-author owl-dot active" data-dot="1">
+		        <div class="work-avatar owl-theme owl-controls" id="my-dots">
+		      
+		         	 <div class="work-author owl-dot active" data-dot="0" data-target="#myCarouselTwo">
 		          </div>
-		          <div class="work-author owl-dot"  data-dot="2">
+		          <div class="work-author owl-dot"  data-dot="1" data-target="#myCarouselTwo">
 		          </div>
-		          <div class="work-author owl-dot" data-dot="3">
+		          <div class="work-author owl-dot" data-dot="2" data-target="#myCarouselTwo">
 		          </div>
-		         </div>
+		         
 		        </div>
 		      </div>
     		</div>
@@ -742,10 +742,11 @@
 		 loop:true,
 		 dots:true,
 		 dotData:true,
+		 pagination:true,
 		 autoplay:true,
 		 smartSpeed:1000,
 		 autoplayTimeout:4000,
-		 responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+		 responsive:{
                     0:{
                         items:1
                     },
