@@ -1494,14 +1494,17 @@ textarea {
 /*Исправить подсказки при пустых полях.*/
 /* ------------------------------------ */
 /* Footer section */
-footer {
-  width: 100%;
+.footer-wrapper {
   background: rgba(0, 0, 0, 0.5) url('../img/footer-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: overlay;
+}
+footer {
+  width: 100%;
+  
 }
 .me {
   max-width: 100%;
@@ -1525,7 +1528,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   color: #fff;
-  width: 100vw;
+  width: 100%;
 }
 .me li {
   font-size: 19px;
