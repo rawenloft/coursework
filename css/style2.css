@@ -1367,7 +1367,7 @@ span.btn-text {
   font-family: 'Open Sans', sans-serif;
 }
 .my-details {
-  width: 30%;
+  width: 32%;
   background-color: #c61673;
   padding: 100px 40px;
   height: 70%;
@@ -1491,4 +1491,68 @@ textarea {
   border: 1px solid transparent;
   margin-top: 0;
 }
+/*Исправить подсказки при пустых полях.*/
 /* ------------------------------------ */
+/* Footer section */
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5) url('../img/footer-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+.me {
+  max-width: 100%;
+  height: calc(80vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.me h2 {
+  font-size: 55px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing:0;
+  color: #c61673;
+  width: 100%;
+  text-align: center;
+}
+.me ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #fff;
+  width: 100vw;
+}
+.me li {
+  font-size: 19px;
+  line-height: 20px;
+
+}
+.me li a {
+  color: #fff;
+}
+
+.me li:not(:last-child){
+  margin-right: 15px;
+}
+.copyright {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  color: #fff;
+  height: 100px;
+  border-top: 1px solid #292929;
+}
+.copyright span {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.me li i:hover {
+  color: #c61673;
+}
+/*DONE!*/

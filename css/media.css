@@ -16,6 +16,9 @@
     top:3px;
     right: 0px;
   }
+  .me {
+    height: calc(50vh - 100px);
+  }
 }
 
 
@@ -95,6 +98,32 @@
     top:3px;
     right: -20px;
   }
+  .form-header h2 {
+    width: 40%;
+  }
+  .hire-form {
+    justify-content: flex-start;
+  }
+  .my-details {
+    margin-left: 20px;
+  }
+  .contact-form {
+    width: 60%;
+    padding-left: 40px;
+  }
+
+  .form-header h2:before {
+  top:0;
+  right: -20px;
+  }
+  .form-header h2:after {
+    top: 3px;
+    right: -40px;
+  }
+  .me {
+    height: calc(100vh - 100px);
+  }
+
 }
 
 
@@ -244,6 +273,21 @@
     top:3px;
     right: -20px;
   }
+  .hire-form {
+    justify-content: space-between;
+  }
+  .my-details {
+    width: 40%;
+    margin-left: 20px;
+  }
+  .contact-form {
+    width: 60%;
+    padding-left: 40px;
+  }
+  .form-header h2 {
+    width: 58%;
+  }
+  
 }
 
 
@@ -425,6 +469,22 @@
   .work-slider {
     width: 100%;
   }
+  .hire-form {
+    flex-flow: column wrap;
+
+  }
+  .my-details {
+    width: 100%;
+    margin: 0 0 100px;
+    padding: 100px 15px;
+  }
+  .contact-form {
+    width: 100%;
+    padding:0;
+  }
+  .form-header h2 {
+    width: 51%;
+  }
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -564,5 +624,16 @@
   .clients-header h2:after {
     top:3px;
     right: -10px;
+  }
+  .form-header h2 {
+    width: 100%;
+  }
+  .form-header h2:before {
+  top:0;
+  right: 60px;
+  }
+  .form-header h2:after {
+    top: 3px;
+    right: 40px;
   }
 }
