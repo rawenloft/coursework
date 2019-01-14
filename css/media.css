@@ -8,10 +8,21 @@
   .my-exp .text h2 {
     width: 35%;
   }
+  .clients-header h2:before {
+  top:0px;
+  right: 20px;
+  }
+  .clients-header h2:after {
+    top:3px;
+    right: 0px;
+  }
 }
 
 
 @media only screen and (max-width:1024px){
+  .menu {
+    padding: 0 50px !important;
+  }
   .my-skills {
     padding: 20px;
   }
@@ -66,6 +77,23 @@
   .skill-header h2:after {
     top:3px;
     right: -40px;
+  }
+  .my-work {
+    padding: 100px 0;
+  }
+  .our-clients {
+    justify-content: space-around;
+  }
+  .our-clients img {
+    transform: scale(0.8);
+  }
+  .clients-header h2:before {
+  top:0px;
+  right: 0px;
+  }
+  .clients-header h2:after {
+    top:3px;
+    right: -20px;
   }
 }
 
@@ -195,7 +223,27 @@
   .skill-proof {
     padding-right: 10px;
   }
-
+  .our-clients {
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 0 50px;
+    align-content: space-between;
+  }
+  .our-clients img {
+    transform: scale(1.2);
+    margin-bottom: 50px;
+  }
+  .clients-header h2 {
+    width: 43%;
+  }
+  .clients-header h2:before {
+  top:0px;
+  right: 0px;
+  }
+  .clients-header h2:after {
+    top:3px;
+    right: -20px;
+  }
 }
 
 
@@ -349,6 +397,34 @@
   .skill-bars ul {
     padding-bottom: 0;
   }
+  .our-clients {
+    padding: 0;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 40px;
+  }
+  .client {
+    width: 27%;
+    padding: 0;
+  }
+  .client img {
+    transform: scale(0.98);
+    margin-bottom: 30px;
+  }
+  .clients-header h2 {
+    width: 100%;
+  }
+  .clients-header h2:before {
+  top:0px;
+  right: 40px;
+  }
+  .clients-header h2:after {
+    top:3px;
+    right: 20px;
+  }
+  .work-slider {
+    width: 100%;
+  }
 }
 @media only screen and (max-width:320px) {
   .container {
@@ -462,5 +538,31 @@
   .skill-header h2:after {
     top:53px;
     right: 65px;
+  }
+  .our-clients {
+    padding: 0;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+  }
+  .client {
+    width: 27%;
+    padding: 0;
+  }
+  .client img {
+    transform: scale(0.98);
+    margin-bottom: 30px;
+  }
+  .clients-header h2 {
+    width: 100%;
+    text-align: left;
+  }
+  .clients-header h2:before {
+  top:0px;
+  right: 10px;
+  }
+  .clients-header h2:after {
+    top:3px;
+    right: -10px;
   }
 }

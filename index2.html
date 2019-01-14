@@ -13,13 +13,11 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600" rel="stylesheet">
 <!-- Карусель -->
-  <link rel="stylesheet" href="owl-carousel/css/owl.carousel.css">
-  <link rel="stylesheet" href="owl-carousel/css/owl.theme.default.css">
+	<link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/change.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="owl-carousel/js/owl.carousel.js"></script>
-  <script src="js/jquery.scrolly.js"></script>
+  
   <title>Alex Khrenov Portfolio</title>
 </head>
 <body>
@@ -567,20 +565,20 @@
 		<div class="container">
 			<div class="my-work">
 		      <div class="our-clients" id="testimonial">
-		        <img src="img/client-1.png" alt="">
-		        <img src="img/client-2.png" alt="">
-		        <img src="img/client-3.png" alt="">
-		        <img src="img/client-4.png" alt="">
-		        <img src="img/client-5.png" alt="">
-		        <img src="img/client-6.png" alt="">
+		        <div class="client"><img src="img/client-1.png" alt=""></div>
+		        <div class="client"><img src="img/client-2.png" alt=""></div>
+		        <div class="client"><img src="img/client-3.png" alt=""></div>
+		        <div class="client"><img src="img/client-4.png" alt=""></div>
+		        <div class="client"><img src="img/client-5.png" alt=""></div>
+		        <div class="client"><img src="img/client-6.png" alt=""></div>
 		      </div>
-		      <div class="clients-header">
+		      <div class="clients-header dots">
 		        <h2>My Clientes</h2>
 		        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam.</p>
 		      </div>
 		      <div class="work-slider">
-		        <div class="slider">
-		          <div class="work-text">
+		        <div class="owl-carousel slider" id="myCarouselTwo" data-ride="carousel">
+		          <div class="work-text active">
 		            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie,
 		              justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est.
 		              Sed mattis egestas elementum. Nulla facilisi. Quisque placerat risus ac nunc ornare tincidunt.
@@ -608,31 +606,100 @@
 		            <span>Web Developer</span>
 		          </div>
 		        </div>
-		        <div class="work-avatar">
-		          <div class="work-author">
-		            <img src="img/client1.jpg" alt="">
+		        <div class="work-avatar owl-theme owl-controls " id="my-dots">
+		         <div class="owl-dots clicable">
+		         	 <div class="work-author owl-dot active" data-dot="1">
 		          </div>
-		          <div class="work-author">
-		            <img src="img/client2.jpg" alt="">
+		          <div class="work-author owl-dot"  data-dot="2">
 		          </div>
-		          <div class="work-author">
-		            <img src="img/client3.jpg" alt="">
+		          <div class="work-author owl-dot" data-dot="3">
 		          </div>
+		         </div>
 		        </div>
 		      </div>
     		</div>
 		</div>
 	</div>
 
-  <script src="js/script.js"></script>
+	<!-- Блок десять - Форма найма -->
+
+	<div class="hire-wrapper">
+		<div class="container">
+			<div class="hire-form">
+		      <div class="my-details" id="contact">
+		        <div class="details-header">
+		          <h3>John Doe</h3>
+		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		        </div>
+		        <div class="my-address find-me">
+		          <i class="fa fa-map-marker"></i>
+		          <h3>Address</h3>
+		          <p>Chittagong, Bangladesh</p>
+		        </div>
+		        <div class="my-email find-me">
+		          <i class="fa fa-envelope"></i>
+		          <h3>Email</h3>
+		          <p>Jamija@gmail.com</p>
+		        </div>
+		        <div class="my-phone find-me">
+		          <i class="fa fa-mobile"></i>
+		          <h3>Phone</h3>
+		          <p>2863482364</p>
+		        </div>
+		      </div>
+		      <div  class="contact-form">
+		        <div class="form-header dots">
+		          <h2>Write Me</h2>
+		          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam.</p>
+		        </div>
+		        <div class="write-here">
+		          <form action="">
+		            <div class="write-me">
+		              <input type="text" class="form-field" placeholder="Name" required data-error="Please enter your name">
+		              <div class="help">
+		                <span>Please enter your name</span>
+		              </div>
+		            </div>
+		            <div class="write-me">
+		              <input type="email" class="form-field" placeholder="Email" required data-error="Please enter your e-mail">
+		              <div class="help">
+		                <span>Please enter your e-mail</span>
+		              </div>
+		            </div>
+		            <div class="write-me">
+		              <input type="text" class="form-field" placeholder="Subject" required data-error="Please enter your subject">
+		              <div class="help">
+		                <span>Please enter your subject</span>
+		              </div>
+		            </div>
+		            <div class="write-me">
+			            <textarea  id="message" class="form-field" rows="7"  placeholder="Message" required data-error="Message empty"></textarea>
+		              <div class="help">
+		                <span>Message empty</span>
+		              </div>
+		            </div>
+		            <button type="submit" name="send-message" class="send btn"><span class="btn-text">Send Message</span></button>
+		          </form>
+		        </div>
+		      </div>
+   			 </div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+	<script src="js/jquery.scrolly.js"></script>
   <script>
+
 	$(document).ready(function() {
-		 $(".owl-carousel").owlCarousel({
+		 $("#myCarousel").owlCarousel({
 		 nav:false,
 		 loop:true,
 		 autoplay:true,
 		 smartSpeed:1000,
-		 autoplayTimeout:2000,
+		 autoplayTimeout:4000,
 		 responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                     0:{
                         items:1
@@ -646,6 +713,43 @@
                 }
 		})
 	});
+	$(document).ready(function() {
+		 $("#myCarouselTwo").owlCarousel({
+		 nav:false,
+		 loop:true,
+		 dots:true,
+		 dotData:true,
+		 autoplay:true,
+		 smartSpeed:1000,
+		 autoplayTimeout:4000,
+		 responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+		})
+	});
+
+	$('.count').each(function () {
+		"use strict"
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 8000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+	$('.parallax').scrolly({bgParallax: true});
+
   </script>
 </body>
 </html>
