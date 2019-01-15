@@ -24,8 +24,9 @@
 <body>
 	
   <!-- Первый блок - меню -->
-  <div class="top-wrapper ripples" id="particles-js" data-stellar-background-ratio="0.4">
+  <div class="top-wrapper">
   	<canvas id="canvas" width="250" height="250"></canvas>
+  	<div id="particles-js" data-stellar-background-ratio="0.4" class="ripples"></div>
       <div class="menu-wrapper">
         <div class="menu">
           <div class="logo" id="home">
@@ -58,7 +59,7 @@
           </nav>
         </div>
       </div>
-        <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+        <div class="container wow fadeIn" data-wow-duration="1s" data-wow-offset="100">
 			
 
       	<div class="first-info">
@@ -193,7 +194,7 @@
 
 <!-- Третий блок - Статистика -->
 	<div class="numbers-wrapper">
-		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
+		<div class="container wow fadeIn" data-wow-duration="1s" data-wow-offset="120">
 			<div class="my-numbers">
 		      <div class="numbers-text">
 		        <h2>My Numbers</h2>
@@ -403,7 +404,7 @@
 		<div class="my-exp">
 		      <div class="exp-wrapper photo">
 		      </div>
-		      <div class="exp-wrapper text dots">
+		      <div class="exp-wrapper text dots wow slideInRight" data-wow-duration="2s" data-wow-delay="1s">
 		        <h2>My Experience</h2>
 		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quas earum, sunt eum.</p>
 		        <ul>
@@ -696,8 +697,8 @@
 	<div class="footer-wrapper">
 		<footer>
       <div class="me">
-	        <h2>John Doe</h2>
-	        <ul>
+	        <h2 class="wow slideInDown" data-wow-duration="2s">John Doe</h2>
+	        <ul class="wow slideInDown" data-wow-duration="2s">
 	          <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
 	          <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
 	          <li><a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
@@ -707,7 +708,7 @@
 	        </ul>
 	      </div>
 
-	      <div class="copyright">
+	      <div class="copyright wow slideInDown" data-wow-duration="2s">
 	        <span>copyright and design: tamzid hossain</span>
       </div>
     </footer>
