@@ -26,11 +26,14 @@
   list-style-type: none;
   font-family: 'Open Sans', sans-serif;
   transition: 0.5s;
+
+}
+*:before, *:after {
+  z-index: 0;
 }
 html,body {
-  background-color: transparent;
+  background-color: lightgrey;
   width: 100%;
-
 }
 h2 {
   font-family: 'Poppins',sans-serif;
@@ -40,81 +43,96 @@ h2 {
   color: #424242;
   letter-spacing: 1px;
 }
-.main-wrapper {
+a:hover {
+  text-decoration: none;
+}
+
+.container {
   width: 100%;
   margin: 0 auto;
+  max-width: 1170px;
+  position: relative;
 }
 /* -------------------------------------------------- */
 
-/*Библиотека Water???
-Наладить анимацию слова, подключить шрифты, logo.
-Разобраться с кнопками
+/*Библиотека Water???подключить шрифты, logo.
+МЕНЮ!!!! Скролл и параллакс!!!
+Разобраться с кнопками, Ховер кнопок.
  */
 /* First section and header.*/
-header {
-  width: 100vw;
-  height: 75px;
+.top-wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  background-image: url('../img/wave.png'),url('../img/bg-top.jpg');
+  background-size:100%, cover;
+  background-position: fixed;
+  background-repeat: no-repeat,no-repeat;
+  background-position: left 101%, top;
+  padding: 0 auto;
+}
+.menu-wrapper {
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 4;
+}
+.menu {
+  max-width: 1176px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 0 40px;
   color: #fff;
-  position: fixed;
-  top:0;
-  background-color: transparent;
+  margin: 0 auto;
   /* box-shadow: 0 0 12px 0 #2d2d2d; *//* HACK: when scroll! */
 
 }
-header .logo {
 
-}
-header .logo span {
+.menu .logo span {
   display: block;
   font-family: 'Poppins', sans-serif;
   font-size: 23px;
+  font-weight: 500;
   color: white;
   letter-spacing: 1px;
+
 }
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container img.wave {
   width: 100%;
+  position: absolute;
+  bottom:0;
 }
 
-.menu-wrapper {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-.logo>a, .menu ul li a {
+.logo>a, .nav ul li a {
   color:#fff;
   text-decoration: none;
 }
-.menu ul {
+.nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin: 17px 20px;
+  margin-right: 0;
   position: relative;
 }
-nav ul li {
+.nav ul li {
   padding: 10px 0;
   position: relative;
   text-decoration: none;
-
 }
-nav>ul>li>a {
+.nav>ul>li>a {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 1px;
 }
-nav>ul>li{
-  margin-left: 20px;
+.nav>ul>li{
+  margin-left: 40px;
 }
 
-.menu>input[type='checkbox'] + label {
+.nav>input[type='checkbox'] + label {
   position:absolute;
   top:25%;
   right: 10%;
@@ -123,7 +141,7 @@ nav>ul>li{
 input[type='checkbox'] {
   display: none;
 }
-.menu label i {
+.nav label i {
   width: 44px;
   height: 34px;
   color: white;
@@ -133,10 +151,8 @@ input[type='checkbox'] {
   border: 1px solid white;
   border-radius: 4px;
 }
-.menu label i:hover {
-  background-color: lightgrey;
-}
-.menu ul li a:focus:before{
+
+.nav ul li a:focus:before{
   content:'';
   position: absolute;
   left: -16px;
@@ -154,22 +170,13 @@ input[type='checkbox'] {
 
 
 .first-info {
-
   bottom: 0;
   height: 100vh;
   max-width: 100%;
-  background-image: url('../img/wave.png'),url('../img/bg-top.jpg');
-  background-size:100%, 100%;
-  background-repeat: no-repeat;
-  background-position: 100% 101%, top;
   display: flex;
   align-items: center;
 }
 
-.header-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
 .headtext-center {
   width: 100%;
   height: auto;
@@ -249,7 +256,7 @@ input[type='checkbox'] {
   background-color: #c61673;
   text-align: center;
   line-height: 50px;
-  margin-top: 20px;
+  margin-top: 25px;
   position: relative;
   transition:all 0.3s;
   border-radius: 0;
@@ -265,6 +272,9 @@ input[type='checkbox'] {
   font-weight: 400;
   z-index: 1;
   position: relative;
+}
+span.btn-text {
+  margin-bottom: 0;
 }
 .btn::before {
   content: '';
@@ -317,29 +327,17 @@ input[type='checkbox'] {
 
 }
 
-.headtext-center:before {
-  content: '';
-  display: block;
-  height: 0px;
-  width: 1px;
-  position: absolute;
-  background-color: white;
-  top:300px;
-  opacity: 1;
-  /* border: 1px solid blue; */
-  animation: scroll-up 2.5s ease-in-out forwards infinite;
-}
 .headtext-center:after {
   content: '';
-  display: block;
-  height: 0px;
+  display:block;
+  height: 80px;
   width: 1px;
+  border-radius:2px;
   position: absolute;
   background-color: white;
-  bottom:-135px;
-  opacity: 1;
-  /* border: 1px solid blue; */
-  animation: scroll-up 2.5s ease-in-out forwards reverse infinite;
+  bottom:-150px;;
+  opacity: 0.8;
+  animation: scroll-up 2.5s ease-in-out forwards infinite;
 }
 
 .round-btn {
@@ -353,28 +351,33 @@ input[type='checkbox'] {
 
 }
 /* --------------------------------------- */
-/* Анимация слайдера, точки, анимация фото, кнопки */
+/* Адаптивность,параллакс, точки перепроверить!!! */
 /* Section two: slider and about */
 
 /*  */
-.about-info {
+.about-wrapper {
   background-image: url('../img/bg-about.jpg');
-  background-position: 100% 100%;
-  background-repeat:no-repeat;
-  padding-top: 100px;
+  background-position: top;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-repeat:repeat;
+
 }
-.slider {
-  width: 90%;
-  height: 510px;
+.about-info {
+  width: 100%;
+  height: 100%;
+  padding: 80px 50px;
+}
+.slider{
+  width: 90vw;
   overflow: hidden;
-  display: flex;
-  flex-flow:row nowrap;
-  justify-content: space-around;
-  align-content: flex-end;
+  text-align: center;
+  margin: 0 auto;
+  max-height: 500px;
+  background-color: transparent;
 }
 .skill {
-  width: 380px;
-  padding: 0 15px;
+  margin: 10px 15px;
   box-shadow: 0 0 15px 0 #e4e4e4;
   background-color: #fff;
   display: block;
@@ -386,57 +389,125 @@ input[type='checkbox'] {
   padding: 50px;
   margin-top: -5px;
   width: 100%;
+  text-align: left;
 }
 .my-skills>i {
   font-size: 30px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
   color: #c61673;
+  position: relative;
+}
+.my-skills i:after {
+  content:'';
+  position: absolute;
+  right: -40px;
+  top: 10px;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: 6px solid #c61673;
+  z-index: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  animation: bulb 1.2s infinite forwards;
 }
 .my-skills>h3 {
   color: #424242;
-  font-style: 22px;
+  font-size: 22px;
   font-family: 'Poppins', sans-serif;
   margin: 10px 0;
-
+  font-weight: 500;
+  text-transform: capitalize;
 }
 .my-skills>p {
   text-align: left;
   line-height: 1.8em;
   font-size:15px;
+  color:#666;
 }
 .about-me {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   width: 100%;
-  height: 100vh;
-  padding: 50px;
-  justify-content: center;
+  padding: 100px 0 0;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
 .about-photo {
   position: relative;
-  height: 100%;
+  width: 35%;
 }
-
+.about-photo:before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background-image: url(../img/skill-bg.png);
+  margin-left: 200px;
+}
 .about-photo img {
-  height: 50%;
+  display: block;
+  max-width: 100%;
+  height: auto;
   border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
   box-shadow: 2px 10px 0px 0px rgba(0, 0, 0, 0.16);
+  position: relative;
 }
+
 
 .about-photo a {
   position: absolute;
-  top:20%;
+  top:40%;
   left:40%;
   transform: translate(0%, 0%);
+  z-index: 2;
 }
+.about-photo a:before {
+  content:'';
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border:6px solid #c61673;
+  top:-6px;
+  left:-6px;
+  z-index: 0;
+  animation: bulb 1s infinite forwards;
+}
+
 .about-text {
-  padding: 40px;
+  display: block;
+  width: 65%;
+  text-align: left;
+  padding-left:40px;
   font-size: 15px;
   line-height: 1.8em;
+  position: relative;
+  z-index: 1;
 }
-.about-text h3 {
+.about-text h2 {
   margin-bottom: 15px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  position: relative;
+  width: 50%;
+}
+
+.about-text h3 {
+  color:#363636;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+.about-text p {
+  font-family: 'Open Sans', sans-serif;
+  margin:15px 0 25px;
+  line-height: 1.8em;
+  font-size:15px;
+  color:#666;
+  font-weight: 400;
 }
 .about-text span {
   color: #c61673;
@@ -445,19 +516,30 @@ input[type='checkbox'] {
   font-size: 42px;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+.dots h2:before {
+  right: -20px;
+  top: -10px;
+}
+.dots h2:after {
+  right: -40px;
+  top: -7px;
 }
 .social-contact-me {
   margin-top: 20px;
 }
 .social-contact-me>ul {
   display: inline-flex;
-  width: 300px;
+  flex-flow: row nowrap;
   justify-content: space-between;
 }
 .social-contact-me>ul>li:not(:first-child) {
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 23px;
   text-align: center;
+
 }
 .social-contact-me>ul>li:first-child {
   margin-right: 30px;
@@ -469,51 +551,65 @@ input[type='checkbox'] {
   width: 50%;
   position: absolute;
   bottom: 0;
+  left: 4px;
   border-top: 1px solid #000;
 }
 
 .social-contact-me>ul>li>a {
   font-size: 14px;
+  line-height: 23px;
   color: #000;
 }
 .social-contact-me>ul>li>a:hover {
   color:#666;
 }
-/* ------------------------------------------ */
-/* Запихнуть розовый фон???, анимация иконок, счетчики? */
+/* ====================================== */
+/*Aанимация иконок. */
 /* Section three: my Numbers */
-.my-numbers {
-  width: 100%;
-  height: 90vh;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.numbers-wrapper {
   background:rgba(0, 0, 0, 0.82) url('../img/counter.jpg');
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.my-numbers {
+  width: 100%;
+  /*height: 75vh;*/
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 .numbers-text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  -ms-align-self: stretch;
+  align-self: stretch;
   flex-flow: column wrap;
   text-align: left;
   padding: 50px 120px;
   width: 550px;
-  height: 100%;
+  /*height: 100%;*/
   line-height: 1.8em;
   background-color: #c61673;
-  clip-path:polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  -webkit-clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  -o-clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
+  clip-path: polygon(16% 0,100% 0, 84% 100%, 0 100%);
 }
 .numbers-text h2, .numbers-text p {
   color: #fff;
 }
+.numbers-text p {
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.8em;
+}
 .my-digits {
   width: 50%;
+  padding: 80px 20px;
   position: relative;
   right: 0;
   display: flex;
@@ -524,57 +620,104 @@ input[type='checkbox'] {
 }
 .stat-box {
   width: 50%;
-  text-align: left;
-  vertical-align: center;
+  text-align: center;
+  vertical-align: middle;
   padding: 10px;
-
+}
+.stat-box:first-child, .stat-box:nth-child(2){
+  margin-bottom: 20px;
 }
 .stat-box i {
   font-size: 25px;
   text-align: center;
   border-radius: 50%;
+  position: relative;
+  z-index:1;
+  line-height: 60px;
+}
+.my-digits .round-btn::after {
+  content:'';
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border:6px solid #c61673;
+  background-color: transparent;
+  top:-11px;
+  left:-11px;
+  z-index: -1;
+  animation: bulb 1.2s infinite forwards;
 }
 .stat-box h2 {
   margin-top: 20px;
   color: #fff;
+  font-size: 32px;
+  font-weight: 500;
 }
 .stat-box span {
   color:#fff;
   margin-top: 10px;
 }
-/* .my-numbers::after {
-  content: '';
-  transform: skew(-10deg);
-  border: 1px solid yellow;
-  background-color:#c61673;
-  position: absolute;
-  height: 2000px;
-  width: 100%;
-  left: 0;
-  top: -1000px;
-  z-index: 1;
-} */
-
-
+.stat-box .round-btn {
+  width: 60px;
+  height: 60px;
+}
+/*Вроде неплохо, прикрутить прокрутку до цифр.*/
 /* ------------------------------------------ */
 /* Section four: My Portfolio and pictures */
+.portfolio-wrapper {
+  background-color: #fff;
+  width: 100%;
+}
 .my-portfolio {
-  padding: 80px;
+  padding: 80px 0;
 }
 .folio-title {
   display: block;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+.folio-title h2 {
+  position: relative;
+  text-align: center;
+}
+.folio-title h2:before {
+  right: 425px;
+  top:0;
+}
+.folio-title h2:after {
+  right: 405px;
+  top:3px;
 }
 .folio-title p {
   font-size: 15px;
   color: #666;
   line-height: 1.8em;
 }
+.folio-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+.folio-wrapper ul {
+  display: block;
+  width: 100%;
+}
+
 .sort-images {
-  display: inline-block;
   text-align: center;
   width: 100%;
+  margin-bottom: 2vh;
+  align-self: stretch;
+  margin-bottom: 40px;
+
 }
 .sort-images li {
   display: inline-block;
@@ -583,38 +726,64 @@ input[type='checkbox'] {
   font-size: 16px;
   color:#666;
   padding: 5px 20px;
-}
-.image-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 2vw;
   position: relative;
-  justify-content: start;
+}
+.sort-images li:active:before {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: 6px solid #c61673;
+  z-index: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  animation: bulb 1.2s infinite forwards;
 }
 .img-box {
-  position: relative;
+  padding: 10px;
+}
+.img-box:nth-of-type(1),.img-box:nth-of-type(2) {
+  width: 48%;
+  margin-bottom: 2vw;
+}
+.img-box:nth-of-type(n+3) {
+  width: 31%;
+
 }
 .image-wrapper img {
   width: 100%;
-  display: grid;
-
+  height: auto;
 }
-
+.img-box {
+  position: relative;
+  display: flex;
+}
 .item-text {
+  padding: 0;
+  margin: 0;
   width: 180px;
-  height: 80px;
-  padding:10px;
+  list-style: none;
   position: absolute;
-  top:100px;
-  left: 70px;
-  left: center;
-
+  opacity: 1;
   display: none;
-  z-index: 3;
+  left: 50%;
+  z-index: 2;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
+/*.item-text:before {
+  position: absolute;
+  content: '';
+  height: calc(100% + 70px);
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  left: 50%;
+  top: -32px;
+  transition: all 0.3s ease 0s;
+}*/
 .item-text>ul {
   display: flex;
   justify-content: space-around;
@@ -646,23 +815,34 @@ input[type='checkbox'] {
   font-weight: 500;
   font-size: 22px;
 }
-
-.image-wrapper img:hover ~.item-text {
+.img-box .img:hover ~ .item-text, .item-text:hover {
   display: block;
-  transition: all 0.3s ease;
-
 }
+
+.portfolio-wrapper input {
+  display: none;
+}
+.image-wrapper input[type=checkbox; id = all]:checked ~ img:not([rel ~="web"])  {
+  display: none;
+}
+/*Исправить переключатели, прокрутка, адаптивность,
+поправить появление на ховере*/
+/* ------------------------------------------- */
+/*===============================================*/
 /* ------------------------------------------- */
 /* Section five: My Experience */
-
-.my-exp {
+.experience-wrapper {
   background:rgba(0, 0, 0, 0.82) url('../img/exp-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: overlay;
-  height: 220vh;
+}
+.experience-wrapper>.container {
+    width: 100% !important;
+  }
+.my-exp {
   width: 100%;
   display: flex;
 }
@@ -670,21 +850,30 @@ input[type='checkbox'] {
   width: 50%;
 }
 .my-exp .photo {
-
-  height: 100%;
+  
   background-image: url('../img/exp-front.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:center;
 }
 .exp-wrapper.text{
-  width: 50%;
+  
   padding: 100px 120px 80px;
-
-
 }
-.wrapper {
-  height:10em;
+.my-exp .text h2 {
+  position: relative;
+  width: 75%;
+}
+.my-exp > .text > p {
+  margin: 10px 0 50px;
+}
+.text h2:before {
+  top:0;
+  right: 10px;
+}
+.text h2:after {
+  top:3px;
+  right: -10px;
 }
 .exp-wrapper>h2,.exp-wrapper p {
   text-align: left;
@@ -692,9 +881,9 @@ input[type='checkbox'] {
 }
 .exp-wrapper p {
   line-height: 1.8em;
-  margin: 10px 0 50px;
   font-size: 15px;
 }
+
 .exp-wrapper ul li h3{
   color:#c61673;
   font-size: 22px;
@@ -714,46 +903,55 @@ input[type='checkbox'] {
   margin-bottom: 15px;
   line-height: 1;
 }
-.exp-wrapper ul li .round-btn {
+.exp-wrapper ul li i {
   border-radius: 0;
-  width: 6em;
-  height: 70px;
-  font-size: 30px;
-
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  position: absolute;
+  margin-left: -70px;
+  margin-top: 8px;
 }
 .exp-wrapper ul li {
-  display: inline-flex;
-  justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 0 10px 70px;
   position: relative;
 }
-.exp-wrapper>ul>li .wrapper {
-  padding: 0 10px 10px 10px;
-}
-
+/*Точки, остальное вроде норм.*/
 /* ------------------------------------------- */
 /* Section six: My Service */
-
-.my-service {
+.service-wrapper {
   background-color: #f2f2f2;
+}
+.my-service {
   padding: 100px 0 70px 0;
 }
 .service-header {
   width: 100%;
-  padding: 0 70px 70px;
   text-align: center;
 }
 .service-text {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .service-header h2 {
-  margin-bottom: 15px;
+  position: relative;
+  width: 30%;
+  margin: 0 auto 15px;
+}
+.service-header h2:before {
+  top:0;
+  right: 20px;
+}
+.service-header h2:after {
+  top:3px;
+  right: 0px;
 }
 .service-header p {
   line-height: 1.8em;
   color: #666;
   font-size: 15px;
+  margin: 15px 0 50px;
 }
 .service-item {
   display: flex;
@@ -765,6 +963,7 @@ input[type='checkbox'] {
   background-color: #fff;
   position: relative;
   padding: 15px 20px 30px 15px;
+  margin: 20px 0 30px;
 }
 .service-item span {
   display: block;
@@ -787,7 +986,7 @@ input[type='checkbox'] {
   font-size: 60px;
   color:#e6e4e4;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 20px;
 }
 .service-item:hover.service-item i {
@@ -807,42 +1006,49 @@ input[type='checkbox'] {
   content:'\25e3';
   color: #c61673;
   position: absolute;
-  top:-18px;
-  left: 113px;
+  top:-27px;
+  left: 111px;
   width: 20px;
+  font-size: 30px;
 }
+/*Выглядит неплохо, перепроверить всё.*/
 /* ------------------------------------------- */
 /* Section seven: features and list of features, btn Hire */
-.features {
-  width: 100%;
+.features-wrapper {
   background:transparent url('../img/features-image.jpg');
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
   background-blend-mode: overlay;
+}
+
+.features {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  align-items: top;
+  padding: 100px 0;
 }
 .features-text {
   width: 70%;
   color: #fff;
-  padding: 100px 0 80px 80px;
+  
 }
 .features-text h2 {
   color: white;
   font-family: 'Poppins',sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 42px;
   line-height: 1.2em;
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: left;
+  letter-spacing: 1px;
 }
 .features-text p {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.8em;
-  text-align: justify;
+  text-align: left;
 }
 .features-text a.btn {
   display: block;
@@ -850,19 +1056,22 @@ input[type='checkbox'] {
   margin-left: 0;
 }
 .features-items {
-  width: 41%;
-  padding: 0 80px 40px 40px;
+  width: 35%;
+  padding: 0 0 20px 40px;
 }
 .features-items ul {
   display: flex;
   flex-flow: column wrap;
+  margin-top: 10px;
 }
 .features-items li {
-  padding: 7px 40px;
+  padding: 9px 40px;
   border-bottom: 1px solid #383838;
   background-color: #c61673;
   color:#fff;
   position: relative;
+  font-size: 15px;
+  overflow: hidden;
 }
 .features-items li::before {
   content:'-';
@@ -884,39 +1093,49 @@ input[type='checkbox'] {
 /* ------------------------------------ */
 /* Section eight: My Skills section with bars */
 
+.skills-wrapper {
+  width: 100%;
+  background-color: #fff;
+}
 .my-skill {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 100px 40px;
-
+  padding: 100px 0;
+  position: relative;
 }
 .skill-image {
   width: 50%;
 
 }
-.skill-image:before {
+.my-skill:before {
   content: '';
   background-image: url('../img/skill-bg.png');
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 100%;
-  /* margin-left: 200px; */
+  background-repeat: repeat;
+  width: 50%;
+  height: 50%;
+  margin-left: 200px; 
+  top:15%;
+  left: 0;
   position: absolute;
+  z-index: 0;
 }
 .skill-image img {
   width: 100%;
   border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
   box-shadow: 2px 10px 0px 0px rgba(0, 0, 0, 0.16);
-  position: relative;
 }
 .skill-proof {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  padding: 0 20px;
+  align-content: flex-start;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+
 }
 .skill-header {
   text-align: left;
@@ -928,6 +1147,15 @@ input[type='checkbox'] {
   color:#424242;
   font-weight: 600;
   margin-bottom: 15px;
+  position: relative;
+}
+.skill-header h2:before {
+  top:0;
+  right: 75px;
+}
+.skill-header h2:after {
+  top:3px;
+  right: 55px;
 }
 .skill-header p {
   font-size:15px;
@@ -937,7 +1165,7 @@ input[type='checkbox'] {
 }
 .skill-bars {
   width: 100%;
-}
+ }
 .skill-bars h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -945,6 +1173,8 @@ input[type='checkbox'] {
   width: 100%;
   margin-top: -30px;
   font-weight: 400;
+  letter-spacing: 0;
+  width: 100%;
   position: relative;
 }
 .skill-bars ul {
@@ -954,10 +1184,11 @@ input[type='checkbox'] {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
+  
 }
 .skill-bars li {
   height: 6px;
-  width: 85%;
+  width: 100%;
   background-color: #ececec;
 }
 .skill-bars li:not(:last-child) {
@@ -983,6 +1214,7 @@ input[type='checkbox'] {
   margin-right: -20px;
   margin-top:-32px;
   position: relative;
+  
 }
 .skill-item span:after {
   content: "\25bc";
@@ -992,24 +1224,29 @@ input[type='checkbox'] {
   float: right;
   left: 3px;
 }
+/*Анимация баров, картинки?? В целом неплохо.*/
 /* ------------------------------- */
 /* Section nine: Testimonial of our team */
-.my-work {
-  width: 100%;
-  height: 200vh;
+.testimonial-wrapper {
   background: rgba(0, 0, 0, 0.62) url('../img/client-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: overlay;
+}
+.my-work {
+  width: 100%;
   padding: 100px 20px;
 }
 .our-clients {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 70px; /* HACK:  */
+}
+.client img {
+  width: 100%;
 }
 .clients-header {
   text-align: center;
@@ -1021,6 +1258,17 @@ input[type='checkbox'] {
 }
 .clients-header h2 {
   color: #fff;
+  position: relative;
+  width: 33%;
+  align-self: center;
+}
+.clients-header h2:before {
+  top:0px;
+  right: 20px;
+}
+.clients-header h2:after {
+  top:3px;
+  right: 0px;
 }
 .clients-header p {
   font-size: 15px;
@@ -1032,9 +1280,7 @@ input[type='checkbox'] {
   padding: 50px 30px 40px;
   text-align: center;
   margin: 0 auto;
-  width: 50%;
-  height: 400px;
-
+  width: 64%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1052,50 +1298,96 @@ input[type='checkbox'] {
   font-weight: 500;
   text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
+  margin: 20px 0 10px;
 }
 .work-text span {
   display: block;
   color: #fff;
   font-size: 15px;
 }
-.work-avatar {
+.owl-dots {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+}
+ .owl-carousel button.owl-dot {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  opacity: .5 !important;
+  transition: all .3s ease-in-out 0s !important;
+  border: 4px solid #666 !important;
+  outline:none;
 
 }
-.work-avatar img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  opacity: .5;
-  transition: all .3s ease-in-out 0s;
-  border: 4px solid #666;
+.owl-dot:not(:last-child) {
+  margin-right: 10px !important;
+}
+button.owl-dot:first-of-type {
+  background-image: url('../img/mike.jpg') !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+button.owl-dot:nth-of-type(2) {
+  background-image: url('../img/kris.jpg') !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+button.owl-dot:nth-of-type(3) {
+  background-image: url('../img/will.jpg') !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+button.owl-dot.active {
+  border-color: #c61673 !important;
+  opacity: 1 !important;
 }
 .work-avatar:not(:last-child) {
   margin-right: 50px;
 }
+/*Сделать переключатели на слайдер*/
 /* ------------------------------------ */
 /* Section ten: Hire Me form */
-
+.hire-wrapper {
+  background-image: url('../img/bg-about.jpg');
+  background-position: top;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-repeat:repeat;
+}
 .hire-form {
   width: 100%;
   display: flex;
   justify-content:space-around;
 }
+.hire-form p {
+  font-family: 'Open Sans', sans-serif;
+}
 .my-details {
-  width: 30%;
+  width: 32%;
   background-color: #c61673;
   padding: 100px 40px;
+  height: 70%;
 }
 .details-header {
   text-align: left;
   color: #fff;
 }
+.details-header>h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: left;
+}
 .details-header p {
   font-size: 15px;
   line-height: 1.8em;
-  margin-bottom: 25px;
+  margin:16px 0 25px;
 }
 
 .find-me {
@@ -1108,30 +1400,58 @@ input[type='checkbox'] {
 }
 .find-me h3 {
   font-family: 'Poppins',sans-serif;
-  font-size: 22px;
-  margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  vertical-align: bottom;
+}
+.find-me p:before {
+  clear: both;
 }
 .find-me p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8em;
   color: #f3f3f3;
+  text-align: left;
 }
-.help {
+.find-me i {
+  float: left;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.write-me .help{
+  padding: 10px 0;
   color: #848484;
-  transition: all .7s;
+  transition: all .7s ease;
   opacity: 0;
 }
-input:required:invalid + .help {
+form::-webkit-validation-bubble {
+  display: none;
+}
+input::invalid + .help {
   opacity: 1;
 }
 .contact-form {
-  padding: 70px auto;
   display: flex;
   flex-flow: column wrap;
-  padding: 100px 20px;
+  padding: 100px 20px 70px;
 }
 .form-header {
   text-align: left;
+}
+.form-header h2 {
+  width: 31%;
+  position: relative;
+}
+.form-header h2:before {
+  top:0;
+  right: -10px;
+}
+.form-header h2:after {
+  top: 3px;
+  right: -30px;
 }
 .form-header p {
   font-size: 15px;
@@ -1141,37 +1461,42 @@ input:required:invalid + .help {
 }
 
 .form-field {
-  display: block;
   width: 100%;
   margin: auto;
-  padding: 6px 12px;
-  height: 45px;
+  padding: 12px 18px;
   border: 1px solid #848484;
   line-height: 1.4;
   outline: none;
   border-radius: 4px;
   color:#495057;
+  font-size: 15px;
 }
+textarea {
+  resize: none;
+}
+.form-field input::placeholder{
+  color:#000;
+}
+
 .form-field:focus {
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px #ce8483;
 }
-button {
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 14px;
+.write-here button {
+  padding:0 12px;
+  font-size: 18px;
   color: #fff;
+  line-height: 50px;
   text-align: center;
   background-color: #c61673;
-  line-height: 1.4;
   border-radius: 4px;
   outline: none;
   border: 1px solid transparent;
+  margin-top: 0;
 }
+/*Исправить подсказки при пустых полях.*/
 /* ------------------------------------ */
 /* Footer section */
-footer {
-  width: 100%;
-  height: 100vh;
+.footer-wrapper {
   background: rgba(0, 0, 0, 0.5) url('../img/footer-bg.jpg');
   background-position: center;
   background-size: cover;
@@ -1179,9 +1504,13 @@ footer {
   background-attachment: fixed;
   background-blend-mode: overlay;
 }
+footer {
+  width: 100%;
+  
+}
 .me {
   max-width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(80vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1201,7 +1530,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   color: #fff;
-  width: 100vw;
+  width: 100%;
 }
 .me li {
   font-size: 19px;
@@ -1226,47 +1555,9 @@ footer {
 .copyright span {
   display: block;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 .me li i:hover {
   color: #c61673;
 }
-@media only screen and (max-width:768px) {
-  nav ul li{
-    margin: 0 !important;
-  }
-  .menu>ul {
-    display: none;
-  }
-  .menu label {
-    display: block !important;
-  }
-  .menu input[type='checkbox']:checked ~ ul {
-    display:flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    top:100%;
-    left:0;
-    background-color: #0005;
-    margin: 0;
-  }
-  .move {
-    height: 60px;
-  }
-  .headtext-center span {
-    font-size: 48px;
-  }
-  .first-info {
-    height: calc(100vh - 100px);
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width:1200px) {
-  .container {
-    width: 1176px;
-  }
-}
+/*DONE!*/
