@@ -170,7 +170,7 @@ input[type='checkbox'] {
   width: 0px;
   border-radius: 50%;
   border: 6px solid #c61673;
-  z-index: 1;
+  z-index: 2;
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   animation: bulb 1.2s infinite forwards;
@@ -195,6 +195,7 @@ input[type='checkbox'] {
   align-items: center;
   padding: 10px 0 10px;
   position: relative;
+  z-index: 2;
 }
 
 .headtext-center p {
