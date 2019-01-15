@@ -1,0 +1,88 @@
+@-webkit-keyframes fade-in {
+  0% { opacity: 0; }
+    5% { display: block;opacity: 1; }
+    /* 5% { display: block;opacity: 1; }
+    17% { display: block;opacity: 1; } */
+    30% { display: block;opacity: 1;}
+    31% { display: none;opacity: 0;}
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-o-keyframes fade-in {
+  0% { opacity: 0; }
+    5% { display: block;opacity: 1; }
+    /* 5% { display: block;opacity: 1; }
+    17% { display: block;opacity: 1; } */
+    30% { display: block;opacity: 1;}
+    31% { display: none;opacity: 0;}
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes fade-in {
+  0% { opacity: 0; }
+    5% { display: block;opacity: 1; }
+    /* 5% { display: block;opacity: 1; }
+    17% { display: block;opacity: 1; } */
+    30% { display: block;opacity: 1;}
+    31% { display: none;opacity: 0;}
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+    5% { display: block;opacity: 1; }
+    /* 5% { display: block;opacity: 1; }
+    17% { display: block;opacity: 1; } */
+    30% { display: block;opacity: 1;}
+    31% { display: none;opacity: 0;}
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes scroll-up {
+    0% {clip: rect(0,auto,0,auto);}
+    80% {clip: rect(0,auto,82px,auto);}
+    100% {clip: rect(82px,auto,82px,auto);}
+}
+@-webkit-keyframes scroll-up {
+    0% {clip: rect(0,auto,0,auto);}
+    80% {clip: rect(0,auto,82px,auto);}
+    100% {clip: rect(82px,auto,82px,auto);}
+}
+
+
+@-webkit-keyframes rot {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(720deg);}
+}
+@-o-keyframes rot {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(720deg);}
+}
+@-moz-keyframes rot {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(720deg);}
+}
+@keyframes rot {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(720deg);}
+}
+
+@-webkit-keyframes bulb {
+  from {transform: scale(.8);opacity: 0.8;}
+  to {transform: scale(1.5);opacity: 0;}
+}
+@-o-keyframes bulb {
+  from {transform: scale(.8);opacity: 0.8;}
+  to {transform: scale(1.5);opacity: 0;}
+}
+@-moz-keyframes bulb {
+  from {transform: scale(.8);opacity: 0.8;}
+  to {transform: scale(1.5);opacity: 0;}
+}
+@keyframes bulb {
+  from {transform: scale(.8);opacity: 0.8;}
+  to {transform: scale(1.5);opacity: 0;}
+}
+
+

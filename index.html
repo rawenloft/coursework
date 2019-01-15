@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/effect.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
@@ -21,9 +22,10 @@
   <title>Alex Khrenov Portfolio</title>
 </head>
 <body>
+	
   <!-- Первый блок - меню -->
   <div class="top-wrapper ripples" id="particles-js" data-stellar-background-ratio="0.4">
-  	<canvas id="canvas"></canvas>
+  	<canvas id="canvas" width="250" height="250"></canvas>
       <div class="menu-wrapper">
         <div class="menu">
           <div class="logo" id="home">
@@ -56,12 +58,12 @@
           </nav>
         </div>
       </div>
-        <div class="container">
+        <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="100">
 			
 
       	<div class="first-info">
 
-            <div id="house" class="headtext-center">
+            <div class="headtext-center">
               <p>Hello everyone! I'm John Doe.<br />
               Let's work together to achive the mountain</p>
               <div class="text-wrapper">
@@ -81,7 +83,7 @@
 <!-- Второй блок - Обо мне -->
 
     <div class="about-wrapper"  data-stellar-background-ratio="0.7" id="about">
-    	<div class="container">
+    	<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
     		<div class="about-info" >
 		      <div class="owl-carousel slider" id="myCarousel" data-ride="carousel">
 
@@ -127,7 +129,7 @@
 
 		        </div>
 		      </div>
-		      <div class="about-me">
+		      <div class="about-me  wow fadeInUp data-wow-duration="1s" data-wow-offset="120">
 		        <div class="about-photo">
               <div class="img over">
   		          <span></span>
@@ -191,7 +193,7 @@
 
 <!-- Третий блок - Статистика -->
 	<div class="numbers-wrapper">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="my-numbers">
 		      <div class="numbers-text">
 		        <h2>My Numbers</h2>
@@ -226,7 +228,7 @@
 	<!-- Четвертый блок - Портфолио. -->
 	
 	<div class="portfolio-wrapper" id="portfolio">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			 <div class="my-portfolio">
 		      <div class="folio-title dots">
 		        <h2>My Portfolio</h2>
@@ -443,7 +445,7 @@
 	<!-- Блок шесть - Услуги -->
 
 	<div class="service-wrapper" id="service">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="my-service">
 		      <div class="service-header dots">
 		        <h2>My Service</h2>
@@ -479,7 +481,7 @@
 	<!-- Блок семь - Фичи -->
 
 	<div class="features-wrapper">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="features">
 		      <div class="features-text">
 		        <h2>
@@ -507,7 +509,7 @@
 	<!-- Блок восемь - Я умею многое. -->
 
 	<div class="skills-wrapper">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="my-skill">
 		      <div class="skill-image img over">
 		        <span></span>
@@ -565,7 +567,7 @@
 	<!-- Блок девять - Свидетельства -->
 
 	<div class="testimonial-wrapper" id="testimonial">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="my-work">
 		      <div class="our-clients">
 		        <div class="client"><img src="img/client-1.png" alt=""></div>
@@ -627,7 +629,7 @@
 	<!-- Блок десять - Форма найма -->
 
 	<div class="hire-wrapper" id="contact">
-		<div class="container">
+		<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
 			<div class="hire-form">
 		      <div class="my-details">
 		        <div class="details-header">
@@ -711,14 +713,15 @@
     </footer>
 	</div>
 
-	<script src="js/jquery.scrolly.js"></script>
-	<script src="js/jquery.stellar.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 
 	<script src="owlcarousel/dist/owl.carousel.min.js"></script>
 	<script src="js/water.js"></script>
 	<script src="js/watereffect.js"></script>
+	<script src="js/jquery.scrollme.min.js"></script>
+	<script src="js/jquery.stellar.js"></script>
+	<script src="js/wow.js"></script>
   <script>
   	// Первая карусель
 		$(document).ready(function() {
@@ -782,7 +785,10 @@
         });
     });
     // Параллакс?
-	$(document).ready(function () {
+  </script>
+  <script>	new WOW().init();</script>
+  <script>
+  	$(document).ready(function () {
 		$(window).stellar({
 			scrollProperty:'scroll',
 			horizontalScrolling:false,
