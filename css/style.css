@@ -64,7 +64,7 @@ canvas {
   z-index: 1;
 }
 
-/*#particles-js{
+#particles-js{
     background: url(../img/bg-top.jpg) fixed;
     width: 100%;
     height: 100%;
@@ -72,7 +72,7 @@ canvas {
     background-size: cover;
     position: absolute;
     z-index: -1;
-}*/
+}
 /* -------------------------------------------------- */
 
 /*Библиотека Water???подключить шрифты, logo.
