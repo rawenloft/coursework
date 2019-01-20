@@ -178,7 +178,7 @@
   }
   .top-wrapper {
     background-size: 100%,768px cover;
-    background-position: bottom, top;
+    background-position: 100% calc(100% + 4px), top;
   }
   .my-skills {
     padding: 20px;
@@ -298,8 +298,8 @@
     margin: 0 auto;
   }
   .top-wrapper {
-    background-size: 100%,768px;
-    background-position: 100% calc(100% - 34px), top;
+    background-size: 100%,820px;
+    background-position:bottom, top;
   }
   .menu {
     padding: 0 15px !important;
