@@ -84,5 +84,19 @@
   from {transform: scale(.8);opacity: 0.8;}
   to {transform: scale(1.5);opacity: 0;}
 }
-
-
+@-webkit-keyframes tog {
+  from {transform:translateY(-5px);}
+  to {transform: translateY(5px);  }
+}
+@-o-keyframes tog {
+  from {transform:translateY(-5px);}
+  to {transform: translateY(5px);  }
+}
+@-moz-keyframes tog {
+  from {transform:translateY(-5px);}
+  to {transform: translateY(5px);  }
+}
+@keyframes tog {
+  from {transform:translateY(-5px);}
+  to {transform: translateY(5px);  }
+}

@@ -63,6 +63,16 @@ canvas {
   height: 100%;
   z-index: 1;
 }
+
+/*#particles-js{
+    background: url(../img/bg-top.jpg) fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}*/
 /* -------------------------------------------------- */
 
 /*Библиотека Water???подключить шрифты, logo.
@@ -161,8 +171,8 @@ input[type='checkbox'] {
   border-radius: 4px;
 }
 
-.nav ul li a:focus:before{
-  content:'';
+.blink{
+  display: inline-block;
   position: absolute;
   left: -16px;
   top: 15px;
@@ -175,8 +185,6 @@ input[type='checkbox'] {
   transform: scale(0.8);
   animation: bulb 1.2s infinite forwards;
 }
-
-
 
 .first-info {
   bottom: 0;
@@ -373,6 +381,62 @@ span.btn-text {
   background-repeat:repeat;
 
 }
+.back {
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+  right: 30px;
+  bottom: 30px;
+  background: transparent;
+  padding: 0px;
+  text-align: center;
+  margin: 0 0 0 0;
+  cursor: pointer;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: white;
+  transform: translateY(-5px);
+  animation: tog 1.2s infinite forwards;
+}
+.back a i{
+  display: block;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-left: 1px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: white;
+  height: 40px;
+  width: 40px;
+  line-height: 37px;
+  background-color: #c61673;
+  text-align: center;
+}
+.back i:hover{
+  background-color: #4b4b4b;
+}
+/*.back a i:before{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-left: 1px;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: white;
+  height: 40px;
+  width: 40px;
+  line-height: 37px;
+  background-color: #c61673;
+  padding: 0;
+  text-align: center;
+  display: block;
+}*/
+
 .about-info {
   width: 100%;
   height: 100%;
@@ -829,12 +893,27 @@ span.btn-text {
   display: block;
 }
 
+.folio-wrapper li label #all:checked ~ .img-box img:not([rel ~= ]) {
+  visibility: visible;
+}
+.folio-wrapper li label #web:checked ~ .img-box img {
+  visibility: visible;
+}
+.folio-wrapper li label #graph:checked ~ .img-box img {
+  visibility: visible;
+}
+.folio-wrapper li label #dev:checked ~ .img-box img {
+  visibility: visible;
+}
+.folio-wrapper li label#photo:checked ~ .img-box img {
+  display:none;
+}
+
 .portfolio-wrapper input {
-  display: none;
+  z-index: 5;
+  opacity: 1;
 }
-.image-wrapper input[type=checkbox; id = all]:checked ~ img:not([rel ~="web"])  {
-  display: none;
-}
+
 /*Исправить переключатели, прокрутка, адаптивность,
 поправить появление на ховере*/
 /* ------------------------------------------- */

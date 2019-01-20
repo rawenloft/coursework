@@ -18,7 +18,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
@@ -55,24 +54,29 @@
             <input type="checkbox" id="lite">
             <label for="lite"><i class="fa fa-bars"></i></label>
             <ul>
-              <li>
+              <li class="new">
+              	<span class="link"></span>
                 <a href="#">Home</a>
               </li>
-              <li>
+              <li class="new">
+              	<span class="link"></span>
                 <a href="#about">About</a>
               </li>
-              <li>
+              <li class="new">
+              	<span class="link"></span>
                 <a href="#portfolio">Portfolio</a>
               </li>
-              <li>
+              <li class="new">
+              	<span class="link"></span>
                 <a href="#service">Service</a>
               </li>
-              <li>
+              <li class="new">
+              	<span class="link"></span>
                 <a href="#testimonial">Testimonial</a>
               </li>
-              <li>
-
-                <a href="#contact">Contact</a></li>
+              <li class="new">
+              	<span class="link"></span>
+				<a href="#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -102,6 +106,9 @@
 <!-- Второй блок - Обо мне -->
 
     <div class="about-wrapper"  data-stellar-background-ratio="0.7" id="about">
+    	<div class="back">
+    		<a href="#"><i class="fa fa-angle-up"></i></a>
+    	</div>
     	<div class="container wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
     		<div class="about-info" >
 		      <div class="owl-carousel slider" id="myCarousel" data-ride="carousel">
@@ -269,7 +276,7 @@
 			            <span></span>
 			            <span></span>
 			            <span></span>
-			            <input type="checkbox" name="sort" id="all">
+			            <input type="radio" name="sort" id="all">
 			            <img src="img/folio-item2.jpg" alt="" rel="design">
 			          </div>
 			            <div class="item-text">
@@ -298,7 +305,7 @@
 			            <span></span>
 			            <span></span>
 			            <span></span>
-			            <input type="checkbox" name="sort" id="web">
+			            <input type="radio" name="sort" id="web">
 			            <img src="img/folio-item1.jpg" alt="" rel="web design">
 			          </div>
 			            <div class="item-text">
@@ -327,7 +334,7 @@
 			            <span></span>
 			            <span></span>
 			            <span></span>
-			            <input type="checkbox" name="sort" id="graph">
+			            <input type="radio" name="sort" id="graph">
 			            <img src="img/folio-item4.jpg" alt="" rel="graphic design">
 			          </div>
 			            <div class="item-text">
@@ -357,7 +364,7 @@
 			            <span></span>
 			            <span></span>
 			            <span></span>
-			            <input type="checkbox" name="sort" id="dev">
+			            <input type="radio" name="sort" id="dev">
 			            <img src="img/folio-item3.jpg" alt="" rel="development">
 			          </div>
 			            <div class="item-text">
@@ -386,7 +393,7 @@
 			            <span></span>
 			            <span></span>
 			            <span></span>
-			            <input type="checkbox" name="sort" id="photo">
+			            <input type="radio" name="sort" id="photo">
 			            <img src="img/folio-item5.jpg" alt="" rel="development">
 			          </div>
 			            <div class="item-text">
@@ -734,10 +741,12 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
-
+	
 	<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollme.min.js"></script>
 	<script src="js/jquery.stellar.js"></script>
+	<script src="js/jquery.scrolly.js"></script>
 	<script src="js/wow.js"></script>
 	<script src="js/water.js"></script>
 	<script src="js/watereffect.js"></script>
@@ -806,7 +815,7 @@
     // Параллакс?
   </script>
   <script>	new WOW().init();</script>
-  <script>
+  <!-- <script>
   	$(document).ready(function () {
 		$(window).stellar({
 			scrollProperty:'scroll',
@@ -817,6 +826,9 @@
 		}).stellar('refresh');
 });
 
+  </script> -->
+  <script>
+  	
   </script>
 </body>
 </html>
