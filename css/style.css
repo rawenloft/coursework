@@ -941,14 +941,14 @@ span.btn-text {
   width: 50%;
 }
 .my-exp .photo {
-  
+
   background-image: url('../img/exp-front.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position:center;
 }
 .exp-wrapper.text{
-  
+
   padding: 100px 120px 80px;
 }
 .my-exp .text h2 {
@@ -1097,10 +1097,10 @@ span.btn-text {
   content:'\25e3';
   color: #c61673;
   position: absolute;
-  top:-27px;
-  left: 111px;
-  width: 20px;
-  font-size: 30px;
+  top:-18px;
+  left: 115px;
+  width: 16px;
+  font-size: 16px;
 }
 /*Выглядит неплохо, перепроверить всё.*/
 /* ------------------------------------------- */
@@ -1123,7 +1123,7 @@ span.btn-text {
 .features-text {
   width: 70%;
   color: #fff;
-  
+
 }
 .features-text h2 {
   color: white;
@@ -1205,7 +1205,7 @@ span.btn-text {
   background-repeat: repeat;
   width: 50%;
   height: 50%;
-  margin-left: 200px; 
+  margin-left: 200px;
   top:15%;
   left: 0;
   position: absolute;
@@ -1275,7 +1275,7 @@ span.btn-text {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  
+
 }
 .skill-bars li {
   height: 6px;
@@ -1305,7 +1305,7 @@ span.btn-text {
   margin-right: -20px;
   margin-top:-32px;
   position: relative;
-  
+
 }
 .skill-item span:after {
   content: "\25bc";
@@ -1597,7 +1597,7 @@ textarea {
 }
 footer {
   width: 100%;
-  
+
 }
 .me {
   max-width: 100%;
