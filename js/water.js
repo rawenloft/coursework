@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	try {
-		$('#particles-js').ripples({
+		$('#canvas').ripples({
 			resolution: 256,
 			perturbance: 0.04
 		});

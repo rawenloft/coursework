@@ -64,7 +64,7 @@ canvas {
   z-index: 1;
 }
 
-#particles-js{
+/*#particles-js{
     background: url(../img/bg-top.jpg) fixed;
     width: 100%;
     height: 100%;
@@ -72,7 +72,7 @@ canvas {
     background-size: cover;
     position: absolute;
     z-index: -1;
-}
+}*/
 /* -------------------------------------------------- */
 
 /*Библиотека Water???подключить шрифты, logo.
@@ -170,9 +170,8 @@ input[type='checkbox'] {
   border: 1px solid white;
   border-radius: 4px;
 }
-
-.blink{
-  display: inline-block;
+.link {
+  display: none;
   position: absolute;
   left: -16px;
   top: 15px;
@@ -184,6 +183,9 @@ input[type='checkbox'] {
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   animation: bulb 1.2s infinite forwards;
+}
+.blink{
+  display: inline-block;
 }
 
 .first-info {
@@ -325,7 +327,7 @@ span.btn-text {
   border: 48px solid transparent;
   border-top: 50px solid transparent;
   border-right: 0px solid transparent;
-  border-left: 159px solid #000;
+  border-left: 160px solid #000;
   width: 100%;
 
 }
@@ -333,7 +335,7 @@ span.btn-text {
   border: 48px solid transparent;
   border-bottom: 50px solid transparent;
   border-left: 0px solid transparent;
-  border-right: 159px solid #000;
+  border-right: 160px solid #000;
   width: 100%;
 
 }
@@ -802,7 +804,7 @@ span.btn-text {
   padding: 5px 20px;
   position: relative;
 }
-.sort-images li:active:before {
+.sort-images li:before {
   content:'';
   position: absolute;
   left: 0;

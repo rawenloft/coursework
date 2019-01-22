@@ -9,6 +9,9 @@ window.onscroll = function() {
         $(".menu-wrapper").css({"background": "transparent","box-shadow": "none"});
         $(".back").css({"opacity":"0"});
     }
+    if(1 > scrolled){
+    	$(".nav ul li a").siblings().removeClass('blink');
+    }
 
 };
 // Первая карусель
@@ -81,4 +84,11 @@ window.onscroll = function() {
             scrollTop: $($anchor.attr('href')).offset().top - 1
         }, 1000);
         event.preventDefault();
+    });
+    $(function(){
+    	$(".nav ul li a").click(function(e){
+    		e.preventDefault();
+    		$(".nav ul li a").siblings().removeClass('blink');
+    		$(this).siblings().addClass('blink');
+    	})
     });
