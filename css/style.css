@@ -804,20 +804,14 @@ span.btn-text {
   padding: 5px 20px;
   position: relative;
 }
-.sort-images li:before {
-  content:'';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  height: 0px;
-  width: 0px;
-  border-radius: 50%;
-  border: 6px solid #c61673;
-  z-index: 1;
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
-  animation: bulb 1.2s infinite forwards;
+.sort-images .link {
+  top:8px;
+  left: 0px;
 }
+.img-box input {
+  display: none;
+}
+
 .img-box {
   padding: 10px;
 }
@@ -898,8 +892,8 @@ span.btn-text {
 .folio-wrapper li label #all:checked ~ .img-box img:not([rel ~= ]) {
   visibility: visible;
 }
-.folio-wrapper li label #web:checked ~ .img-box img {
-  visibility: visible;
+.folio-wrapper li label #web:checked ~ .img:not([rel ~= design ]) {
+  display:none;
 }
 .folio-wrapper li label #graph:checked ~ .img-box img {
   visibility: visible;
@@ -907,7 +901,7 @@ span.btn-text {
 .folio-wrapper li label #dev:checked ~ .img-box img {
   visibility: visible;
 }
-.folio-wrapper li label#photo:checked ~ .img-box img {
+.folio-wrapper li label#photo:checked ~ .img-box {
   display:none;
 }
 
@@ -1097,10 +1091,10 @@ span.btn-text {
   content:'\25e3';
   color: #c61673;
   position: absolute;
-  top:-18px;
-  left: 115px;
-  width: 16px;
-  font-size: 16px;
+  top:-27px;
+  left: 111px;
+  width: 20px;
+  font-size: 30px;
 }
 /*Выглядит неплохо, перепроверить всё.*/
 /* ------------------------------------------- */

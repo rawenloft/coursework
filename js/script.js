@@ -25,7 +25,7 @@ window.onscroll = function() {
 		 autoplay:true,
 		 smartSpeed:1000,
 		 autoplayTimeout:4000,
-		 responsive:{ 
+		 responsive:{
                     0:{
                         items:1
                     },
@@ -90,5 +90,10 @@ window.onscroll = function() {
     		e.preventDefault();
     		$(".nav ul li a").siblings().removeClass('blink');
     		$(this).siblings().addClass('blink');
-    	})
+    	});
+      $(".sort-images li label").click(function(e){
+    		e.preventDefault();
+    		$(".sort-images li label").siblings().removeClass('blink');
+    		$(this).siblings().addClass('blink');
+    	});
     });

@@ -219,7 +219,7 @@
   }
   .exp-wrapper:first-child {
     width: 30%;
-  }  
+  }
   .exp-wrapper:last-child {
     width: 70%;
     padding: 100px 30px 80px;
@@ -287,7 +287,7 @@
   .form-header h2 {
     width: 58%;
   }
-  
+
 }
 
 
@@ -482,6 +482,9 @@
     width: 100%;
     padding:0;
   }
+  .hire-form {
+    padding-bottom: 50px;
+  }
   .form-header h2 {
     width: 51%;
   }
@@ -559,12 +562,12 @@
     text-align: left;
   }
   .folio-title h2:before {
-    right: 0px;
     top:0;
+    right: 10px;
   }
   .folio-title h2:after {
-    right: -15px;
     top:3px;
+    right: -5px;
   }
   .text h2:before {
   top:50px;
@@ -589,15 +592,15 @@
     top:10%;
     width: 35%;
     height: 30%;
-  
+
   }
   .skill-header h2:before {
   top:50px;
-  right: 85px;
+  right: 65px;
   }
   .skill-header h2:after {
     top:53px;
-    right: 65px;
+    right: 45px;
   }
   .our-clients {
     padding: 0;
