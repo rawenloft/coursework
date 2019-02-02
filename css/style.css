@@ -378,8 +378,8 @@ span.btn-text {
 .about-wrapper {
   background-image: url('../img/bg-about.jpg');
   background-position: top;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: cover;
+  background-size:cover;
   background-repeat:repeat;
 
 }
@@ -457,13 +457,14 @@ span.btn-text {
   box-shadow: 0 0 15px 0 #e4e4e4;
   background-color: #fff;
   display: block;
+
 }
 .skill>img {
   width: 100%;
 }
 .my-skills {
   padding: 50px;
-  margin-top: -5px;
+  margin-top: -15px;
   width: 100%;
   text-align: left;
 }
@@ -775,13 +776,26 @@ span.btn-text {
   margin: 0 auto;
   text-align: center;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   position: relative;
   justify-content: space-between;
   align-items: center;
-  align-content: space-between;
+}
+.items-wrapper {
+  width: 100%;
+  margin:0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.grid-sizer,
+.grid-item { 
+  width: 34%; 
+}
+
+.grid-item--width2 { 
+  width: 40%; 
+}
 .folio-wrapper ul {
   display: block;
   width: 100%;
@@ -808,22 +822,19 @@ span.btn-text {
   top:8px;
   left: 0px;
 }
-.img-box input {
-  display: none;
-}
 
 .img-box {
   padding: 10px;
 }
 .img-box:nth-of-type(1),.img-box:nth-of-type(2) {
-  width: 48%;
+  width: 50%;
   margin-bottom: 2vw;
 }
 .img-box:nth-of-type(n+3) {
-  width: 31%;
+  width: 33%;
 
 }
-.image-wrapper img {
+.items-wrapper img {
   width: 100%;
   height: auto;
 }
@@ -887,27 +898,6 @@ span.btn-text {
 }
 .img-box .img:hover ~ .item-text, .item-text:hover {
   display: block;
-}
-
-.folio-wrapper li label #all:checked ~ .img-box img:not([rel ~= ]) {
-  visibility: visible;
-}
-.folio-wrapper li label #web:checked ~ .img:not([rel ~= design ]) {
-  display:none;
-}
-.folio-wrapper li label #graph:checked ~ .img-box img {
-  visibility: visible;
-}
-.folio-wrapper li label #dev:checked ~ .img-box img {
-  visibility: visible;
-}
-.folio-wrapper li label#photo:checked ~ .img-box {
-  display:none;
-}
-
-.portfolio-wrapper input {
-  z-index: 5;
-  opacity: 1;
 }
 
 /*Исправить переключатели, прокрутка, адаптивность,
@@ -1441,8 +1431,8 @@ button.owl-dot.active {
 .hire-wrapper {
   background-image: url('../img/bg-about.jpg');
   background-position: top;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: cover;
+  background-size:cover;
   background-repeat:repeat;
 }
 .hire-form {

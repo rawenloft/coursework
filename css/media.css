@@ -204,7 +204,7 @@
     width: 100%;
   }
   .img-box:not(:last-of-type) {
-    width: 48%;
+    width: 47%;
   }
   .img-box:last-of-type {
     width: 100%;
@@ -358,6 +358,7 @@
   .numbers-text {
     padding: 40px 60px;
     text-align: center;
+    width: 100%;
   }
   .sort-images li {
     display: block;

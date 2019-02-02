@@ -14,6 +14,10 @@ window.onscroll = function() {
     }
 
 };
+//Фильтр в портфолио
+
+var checked;
+window.
 // Первая карусель
 		$(document).ready(function() {
 		 $("#myCarousel").owlCarousel({
@@ -75,6 +79,7 @@ window.onscroll = function() {
             }
         });
     });
+    // Плавный скроллинг
    $(document).ready(function() {
         $(window).stellar();
     });
@@ -85,15 +90,21 @@ window.onscroll = function() {
         }, 1000);
         event.preventDefault();
     });
+    // Мигающие индикаторы
     $(function(){
     	$(".nav ul li a").click(function(e){
     		e.preventDefault();
     		$(".nav ul li a").siblings().removeClass('blink');
     		$(this).siblings().addClass('blink');
     	});
-      $(".sort-images li label").click(function(e){
+      $(".sort-images li span").click(function(e){
     		e.preventDefault();
-    		$(".sort-images li label").siblings().removeClass('blink');
+    		$(".sort-images li span").siblings().removeClass('blink');
     		$(this).siblings().addClass('blink');
+                var $grid = $('.grid').isotope({});
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            
+
     	});
     });
