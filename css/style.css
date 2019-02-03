@@ -1500,6 +1500,7 @@ input::invalid + .help {
 .contact-form {
   display: flex;
   flex-flow: column wrap;
+  width: 65%;
   padding: 100px 20px 70px;
 }
 .form-header {
@@ -1518,10 +1519,9 @@ input::invalid + .help {
   right: -30px;
 }
 .form-header p {
-  font-size: 15px;
+  font-size: 24px;
   color: #666;
   line-height: 1.8em;
-  margin-bottom: 50px;
 }
 
 .form-field {
