@@ -776,26 +776,12 @@ span.btn-text {
   margin: 0 auto;
   text-align: center;
   display: flex;
-  flex-flow: column wrap;
-  position: relative;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content:center;
   align-items: center;
 }
-.items-wrapper {
-  width: 100%;
-  margin:0;
-  display: flex;
-  flex-flow: row wrap;
-}
 
-.grid-sizer,
-.grid-item { 
-  width: 34%; 
-}
 
-.grid-item--width2 { 
-  width: 40%; 
-}
 .folio-wrapper ul {
   display: block;
   width: 100%;
@@ -825,37 +811,39 @@ span.btn-text {
 
 .img-box {
   padding: 10px;
+  position: relative;
 }
 .img-box:nth-of-type(1),.img-box:nth-of-type(2) {
   width: 50%;
-  margin-bottom: 2vw;
+  margin-bottom: 20px;
 }
-.img-box:nth-of-type(n+3) {
+.img-box:nth-of-type(n+3), .img-box:not(last-of-type) {
   width: 33%;
 
 }
-.items-wrapper img {
+.img-box:last-of-type() {
+  height: 100%;
+}
+.img-box img {
   width: 100%;
-  height: auto;
-}
-.img-box {
   position: relative;
-  display: flex;
 }
+
 .item-text {
   padding: 0;
   margin: 0;
   width: 180px;
   list-style: none;
   position: absolute;
-  opacity: 1;
-  display: none;
+  opacity: 0;
+  display:block;
   left: 50%;
   z-index: 2;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+ 
 }
-/*.item-text:before {
+.item-text:before {
   position: absolute;
   content: '';
   height: calc(100% + 70px);
@@ -864,7 +852,7 @@ span.btn-text {
   left: 50%;
   top: -32px;
   transition: all 0.3s ease 0s;
-}*/
+}
 .item-text>ul {
   display: flex;
   justify-content: space-around;
@@ -872,6 +860,7 @@ span.btn-text {
   flex-flow: row wrap;
   background-color: #0008;
   padding: 10px;
+  transition: all 0.4s ease-in;
 
 }
 .item-text li i {
@@ -897,7 +886,7 @@ span.btn-text {
   font-size: 22px;
 }
 .img-box .img:hover ~ .item-text, .item-text:hover {
-  display: block;
+ opacity: 1;
 }
 
 /*Исправить переключатели, прокрутка, адаптивность,

@@ -203,12 +203,12 @@
   .numbers-wrapper .container {
     width: 100%;
   }
-  .img-box:not(:last-of-type) {
+  .img-box:nth-of-type(n) {
     width: 47%;
   }
-  .img-box:last-of-type {
+  /*.img-box:last-of-type {
     width: 100%;
-  }
+  }*/
   .folio-title h2:before {
   right: 205px;
   top:0;

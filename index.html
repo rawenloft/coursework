@@ -255,20 +255,20 @@
 			 <div class="my-portfolio">
 		      <div class="folio-title dots">
 		        <h2>My Portfolio</h2>
-		        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam. </p>
+		        <p>Work with other people inspires me for the best results every day. </p>
 		      </div>
 
         		<div class="image-wrapper">
 		        	<div class="folio-wrapper">
 				        <ul class="sort-images">
-				          <li><span class="link"></span><span class="all" data-filter="*">All-design</span></li>
-				          <li><span class="link"></span><span class="web" data-filter=".web">Web-design</span></li>
-				          <li><span class="link"></span><span class="graph" data-filter=".graphics">Graphics-design</span></li>
-				          <li><span class="link"></span><span class="dev" data-filter=".dev">Development</span></li>
-				          <li><span class="link"></span><span class="photo" data-filter=".photo">Photography</span></li>
+				          <li><span class="link"></span><span class="button all" data-filter="all">All-design</span></li>
+				          <li><span class="link"></span><span class="button web" data-filter="web">Web-design</span></li>
+				          <li><span class="link"></span><span class="button graph" data-filter="graphics">Graphics-design</span></li>
+				          <li><span class="link"></span><span class="button dev" data-filter="dev">Development</span></li>
+				          <li><span class="link"></span><span class="button photo" data-filter="photo">Photography</span></li>
 				        </ul>
-				     <div class="items-wrapper grid  wow fadeInUp" data-wow-duration="1s" data-wow-offset="120">
-		    		    <div class="img-box grid-item grid-item--width2 graphics" data-filter="graphics">
+				     
+		    		    <div class="img-box mix graphics" data-category="graphics">
 				          <div class="img over">
 				            <span></span>
 				            <span></span>
@@ -296,7 +296,7 @@
 				              </ul>
 				            </div>
 				        </div>
-				        <div class="img-box grid-item grid-item--width2 web" data-filter="web">
+				        <div class="img-box mix web" data-category="web">
 				          <div class="img over">
 				            <span></span>
 				            <span></span>
@@ -324,7 +324,7 @@
 				              </ul>
 				            </div>
 				        </div>
-						  <div class="img-box grid-item grid-sizer dev" data-filter="dev">
+						  <div class="img-box mix dev" data-category="dev">
 					          <div class="img over">
 					            <span></span>
 					            <span></span>
@@ -353,7 +353,7 @@
 				            </div>
 
 				        </div>
-				        <div class="img-box grid-item graphics" data-filter="graphics">
+				        <div class="img-box mix graphics" data-category="graphics">
 				          <div class="img over">
 				            <span></span>
 				            <span></span>
@@ -381,7 +381,7 @@
 				              </ul>
 				            </div>
 				        </div>
-				        <div class="img-box grid-item dev" data-filter="dev">
+				        <div class="img-box mix dev" data-category="dev">
 				          <div class="img over">
 				            <span></span>
 				            <span></span>
@@ -408,9 +408,35 @@
 				              </li>
 				            </ul>
 				            </div>
-
+		          		</div>
+		          		<div class="img-box mix photo" data-category="photo">
+				          <div class="img over">
+				            <span></span>
+				            <span></span>
+				            <span></span>
+				            <span></span>
+				            <img src="img/folio-item6.jpg" alt="">
 				          </div>
-		          	</div>
+				            <div class="item-text">
+				            <ul>
+				              <li>Item Name</li>
+				              <li>
+				                <a href="">
+				                  <i class="fa fa-camera"></i>
+				                </a>
+				              </li>
+				              <li>
+				                <a href="">
+				                  <i class="fa fa-link"></i></a>
+				              </li>
+				              <li>
+				                <a href="">
+				                  <i class="fa fa-shopping-cart"></i>
+				                </a>
+				              </li>
+				            </ul>
+				            </div>
+		          		</div>
 		          </div>
 	      		</div>
 		    </div>
@@ -741,23 +767,12 @@
 	<script src="js/jquery.scrollme.min.js"></script>
 	<script src="js/steller.js"></script>
 	<script src="js/wow.js"></script>
-	<script src="js/water.js"></script>
-	<script src="js/watereffect.js"></script>	
-	<script src="js/isotope.pkgd.min.js"></script>
+
+	<!-- <script src="js/water.js"></script> -->
+	<!-- <script src="js/watereffect.js"></script>	 -->
 	<script>
   		new WOW().init();
 	</script>
-	<script>
-		$('.grid').isotope({
-		  // options
-		  itemSelector: '.grid-item',
-		  layoutMode: 'fitRows',
-		  masonry: {
-    		// use element for option
-		    columnWidth: '.grid-sizer',
-		    horizontalOrder:true,
-		  }
-		});
-	</script>
+	
 </body>
 </html>
