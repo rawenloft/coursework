@@ -278,23 +278,21 @@ input[type='checkbox'] {
   line-height: 50px;
   margin-top: 25px;
   position: relative;
-  transition:all 0.3s;
+  transition: all 0.3s ease;
   border-radius: 0;
   overflow: hidden;
+
 }
 .btn span.btn-text, div.btn-text {
   color: #fff;
   text-align: center;
-  line-height: 50px;
+  line-height: 52px;
   text-transform: uppercase;
   font-family: 'Poppins',sans-serif;
   font-size: 16px;
   font-weight: 400;
   z-index: 1;
   position: relative;
-}
-span.btn-text {
-  margin-bottom: 0;
 }
 .btn::before {
   content: '';
@@ -316,35 +314,31 @@ span.btn-text {
 }
 .btn:hover {
   color:#fff;
-  border-color: #000;
-
+  border:#000;
+  border-radius: 6px;
+  box-shadow: 00px 5px 20px #0005;
 }
 .btn:hover:before, .btn:hover:after {
   transition: all .3s;
-  border-width: 50px 160px;
+  border-width: 160px 50px;
 }
 .btn:hover:before {
   border: 48px solid transparent;
   border-top: 50px solid transparent;
   border-right: 0px solid transparent;
   border-left: 160px solid #000;
-  width: 100%;
-
 }
 .btn:hover:after {
   border: 48px solid transparent;
   border-bottom: 50px solid transparent;
   border-left: 0px solid transparent;
   border-right: 160px solid #000;
-  width: 100%;
-
 }
 .btn::before, .btn::after {
   content: '';
   display: block;
   position: absolute;
   transform: rotate(0deg);
-
 }
 
 .headtext-center:after {
@@ -569,7 +563,7 @@ span.btn-text {
   font-weight: 600;
   font-size: 42px;
   position: relative;
-  width: 50%;
+  width: 70%;
 }
 
 .about-text h3 {
@@ -597,11 +591,11 @@ span.btn-text {
   display: inline-block;
 }
 .dots h2:before {
-  right: -20px;
+  right: 20px;
   top: -10px;
 }
 .dots h2:after {
-  right: -40px;
+  right: 0px;
   top: -7px;
 }
 .social-contact-me {
@@ -678,6 +672,7 @@ span.btn-text {
 }
 .numbers-text h2, .numbers-text p {
   color: #fff;
+
 }
 .numbers-text p {
   font-size: 15px;
@@ -841,7 +836,7 @@ span.btn-text {
   z-index: 2;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
- 
+
 }
 .item-text:before {
   position: absolute;
@@ -926,18 +921,18 @@ span.btn-text {
 }
 .my-exp .text h2 {
   position: relative;
-  width: 75%;
+  width: 90%;
 }
 .my-exp > .text > p {
   margin: 10px 0 50px;
 }
 .text h2:before {
   top:0;
-  right: -20px;
+  right: 10px;
 }
 .text h2:after {
   top:3px;
-  right: -40px;
+  right: -10px;
 }
 .exp-wrapper>h2,.exp-wrapper p {
   text-align: left;
@@ -1328,11 +1323,11 @@ span.btn-text {
 }
 .clients-header h2:before {
   top:0px;
-  right: 20px;
+  right: 40px;
 }
 .clients-header h2:after {
   top:3px;
-  right: 0px;
+  right: 20px;
 }
 .clients-header p {
   font-size: 15px;

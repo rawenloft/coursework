@@ -14,10 +14,7 @@ window.onscroll = function() {
     }
 
 };
-//Фильтр в портфолио
 
-var checked;
-window.
 // Первая карусель
 		$(document).ready(function() {
 		 $("#myCarousel").owlCarousel({
@@ -101,16 +98,16 @@ window.
     		e.preventDefault();
     		$(".sort-images li span").siblings().removeClass('blink');
     		$(this).siblings().addClass('blink');
-            
+
             var filterValue = $(this).attr('data-filter');
             var elem = $(".img-box");
                 if(filterValue == "all"){
-                  $(elem).show("1000").css({'transform': 'translate(50)'});
+                  $(elem).show("1000").css({'transform': 'translate(150)'});
                 }
                 else{
                   $(elem).not("."+filterValue).hide("1000").fadeOut();
                   $(elem).filter("."+filterValue).show("1000").fadeIn();
                 }
-                
+
     	});
     });

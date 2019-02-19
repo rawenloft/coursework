@@ -1,4 +1,4 @@
-@media only screen and (min-width:1441px) {
+@media screen and (min-width:1441px) {
   .menu {
     padding: 0 70px !important;
   }
@@ -8,6 +8,7 @@
   .my-exp .text h2 {
     width: 35%;
   }
+
   .clients-header h2:before {
   top:0px;
   right: 20px;
@@ -22,18 +23,18 @@
 }
 
 
-@media only screen and (max-width:1024px){
+@media screen and (max-width:1024px){
   .menu {
     padding: 0 50px !important;
   }
   .my-skills {
-    padding: 20px;
+    padding: 30px 20px 20px;
   }
   .container {
     width: 960px;
   }
   .about-text h2 {
-    width: 64%;
+    width: 87%;
   }
   .folio-title h2:before {
   right: 325px;
@@ -42,6 +43,9 @@
   .folio-title h2:after {
     right: 305px;
     top:3px;
+  }
+  .numbers-text h2, .numbers-text p{
+    width: 110%;
   }
   .my-exp .text h2 {
     width: 100%;
@@ -92,11 +96,11 @@
   }
   .clients-header h2:before {
   top:0px;
-  right: 0px;
+  right:10px;
   }
   .clients-header h2:after {
     top:3px;
-    right: -20px;
+    right: -10px;
   }
   .form-header h2 {
     width: 40%;
@@ -127,7 +131,7 @@
 }
 
 
-@media only screen and (max-width:768px) {
+@media screen and (max-width:768px) {
   .container {
     width: 720px;
   }
@@ -181,13 +185,21 @@
     background-position: 100% calc(100% + 4px), top;
   }
   .my-skills {
-    padding: 20px;
+    padding: 30px 20px 20px;
   }
   .about-info {
     padding: 80px 15px;
   }
   .about-text h2 {
     width: 80%;
+  }
+  .dots h2:before {
+    right: 10px;
+    top: 15px;
+  }
+  .dots h2:after {
+    right: -10px;
+    top: 18px;
   }
   .numbers-text {
     padding: 0 50px 0 50px;
@@ -234,6 +246,14 @@
   }
   .service-header h2 {
     width: 40%;
+  }
+  .service-header h2:before {
+    top:0;
+    right: 0px;
+  }
+  .service-header h2:after {
+    top:3px;
+    right: -20px;
   }
   .features-text {
     width: 60%;
@@ -287,11 +307,18 @@
   .form-header h2 {
     width: 58%;
   }
-
+  .form-header h2:before {
+    top: 0px;
+    right: -10px;
+  }
+  .form-header h2:after {
+    top: 3px;
+    right: -30px;
+  }
 }
 
 
-@media only screen and (max-width:576px) {
+@media screen and (max-width:576px) {
   .container {
     width: 100%;
     padding: 0 15px;
@@ -345,6 +372,7 @@
   }
   .my-numbers {
     padding-top: 100px;
+    padding-bottom: 80px;
   }
   .my-digits {
     padding: 50px 0 0;
@@ -433,11 +461,11 @@
   }
   .skill-header h2:before {
   top:50px;
-  right: 255px;
+  right: 235px;
   }
   .skill-header h2:after {
     top:53px;
-    right: 235px;
+    right: 215px;
   }
   .skill-bars ul {
     padding-bottom: 0;
@@ -461,11 +489,11 @@
   }
   .clients-header h2:before {
   top:0px;
-  right: 40px;
+  right: 45px;
   }
   .clients-header h2:after {
     top:3px;
-    right: 20px;
+    right: 25px;
   }
   .work-slider {
     width: 100%;
@@ -487,10 +515,10 @@
     padding-bottom: 50px;
   }
   .form-header h2 {
-    width: 51%;
+    width: 53%;
   }
 }
-@media only screen and (max-width:320px) {
+@media screen and (max-width:320px) {
   .container {
     width: 100%;
     padding: 0 15px;
