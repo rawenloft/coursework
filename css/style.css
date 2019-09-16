@@ -281,7 +281,6 @@ input[type='checkbox'] {
   transition: all 0.3s ease;
   border-radius: 0;
   overflow: hidden;
-
 }
 .btn span.btn-text, div.btn-text {
   color: #fff;
@@ -294,7 +293,7 @@ input[type='checkbox'] {
   z-index: 1;
   position: relative;
 }
-.btn::before {
+.btn:before {
   content: '';
   position: absolute;
   width: 0;
@@ -302,8 +301,10 @@ input[type='checkbox'] {
   bottom: 0;
   left: 0;
   border-color: transparent transparent transparent #000;
+  transition: width .3s;
+
 }
-.btn::after {
+.btn:after {
   content: '';
   position: absolute;
   width: 0;
@@ -311,11 +312,13 @@ input[type='checkbox'] {
   top: 0;
   right: 0;
   border-color: transparent #000 transparent transparent;
+  transition: width .3s;
+
 }
 .btn:hover {
   color:#fff;
   border:#000;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 00px 5px 20px #0005;
 }
 .btn:hover:before, .btn:hover:after {

@@ -163,7 +163,6 @@
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
-    align-content: flex-start;
     position: absolute;
     width: 100%;
     max-width: 100vw;
